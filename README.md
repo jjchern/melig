@@ -1,4 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+[![Travis-CI Build Status](https://travis-ci.org/jjchern/melig.svg?branch=master)](https://travis-ci.org/jjchern/melig)
+
 About `melig`
 =============
 
@@ -491,7 +493,7 @@ Income Cutoffs for Children
 *Note*: The children dataset, `melig::ch0015`, has
 
 -   a `type` variable that separates Medicaid and CHIP programs, and
--   an `age` variable that indicates specific age groups.
+-   an `agegrp` variable that indicates specific age groups.
 
 Because the age information for the CHIP programs (`type == CHIP`) is not available from the source data, I assign a value of "0-18" to the corresponding `age` variable, though some states' CHIP programs don't cover all children under age 19 in some years.
 

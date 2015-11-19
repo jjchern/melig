@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![Travis-CI Build Status](https://travis-ci.org/jjchern/melig.svg?branch=master)](https://travis-ci.org/jjchern/melig)
+
 # About `melig`
 
 The R package `melig` contains information on **M**edicaid income **elig**ibility limits, collected by [the Kaiser Family Foundation](http://kff.org/data-collection/trends-in-medicaid-income-eligibility-limits/). It includes the following datasets:
@@ -83,7 +85,7 @@ melig::ca1115 %>%
 _Note_: The children dataset, `melig::ch0015`, has 
 
 - a `type` variable that separates Medicaid and CHIP programs, and 
-- an `age` variable that indicates specific age groups.
+- an `agegrp` variable that indicates specific age groups.
 
 Because the age information for the CHIP programs (`type == CHIP`) is not available from the source data, I assign a value of "0-18" to the corresponding `age` variable, though some states' CHIP programs don't cover all children under age 19 in some years.
 
