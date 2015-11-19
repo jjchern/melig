@@ -108,5 +108,5 @@ haven::write_dta(melig::pa0215, "pa0215.dta")
 rio::export(melig::pa0215, "pa0215.dta")
 ```
 
-Or download the `*.rda` file and try the (rioweb)[https://lbraglia.shinyapps.io/rioweb] made by [@lbraglia](https://github.com/lbraglia).
+Or download the `*.rda` file and try the [rioweb](https://lbraglia.shinyapps.io/rioweb) made by [@lbraglia](https://github.com/lbraglia).
 
