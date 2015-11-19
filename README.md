@@ -26,8 +26,8 @@ Useful Links
 -   [Medicaid Income Eligibility Limits (Most Recent Data)](http://kff.org/state-category/medicaid-chip/medicaidchip-eligibility-limits/)
 -   [Annual Updates on Eligibility Rules, Enrollment and Renewal Procedures, and Cost-Sharing Practices in Medicaid and CHIP](http://kff.org/medicaid/report/annual-updates-on-eligibility-rules-enrollment-and/)
 
-Installation
-============
+Installing the Package
+======================
 
 ``` r
 # install.packages("devtools")
@@ -535,3 +535,16 @@ melig::ch0015 %>%
 #> 10 Illinois    17    IL Medicaid    1-5   April  2003    133
 #> ..      ...   ...   ...      ...    ...     ...   ...    ...
 ```
+
+Save as Other Data Formats
+--------------------------
+
+``` r
+# save as Stata format
+haven::write_dta(melig::pa0215, "pa0215.dta")
+
+# or
+rio::export(melig::pa0215, "pa0215.dta")
+```
+
+Or download the `*.rda` file and try the (rioweb)[<https://lbraglia.shinyapps.io/rioweb>] made by [@lbraglia](<https://github.com/lbraglia>).
