@@ -62,7 +62,7 @@ melig::pa0215 %>%
   tidyr::spread(monyear, cutoff)
 ```
 
-## States that Have Income Cutoff Greater Than 100 Federal Poverty Guidelines
+## States that Have Income Cutoff Greater Than 100 Federal Poverty Guidelines in 2014
 
 ```{r, message=FALSE, warning=FALSE}
 # for parents

@@ -85,8 +85,8 @@ melig::pa0215 %>%
 #>   January 2015 (int), July 2004 (int), July 2005 (int), July 2006 (int)
 ```
 
-States that Have Income Cutoff Greater Than 100 Federal Poverty Guidelines
---------------------------------------------------------------------------
+States that Have Income Cutoff Greater Than 100 Federal Poverty Guidelines in 2014
+----------------------------------------------------------------------------------
 
 ``` r
 # for parents
