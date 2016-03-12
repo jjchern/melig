@@ -11,7 +11,7 @@
 #' Medicaid/CHIP Income Eligibility Limits for Pregnant Women, 2003-2015
 #'
 #' @source /url{http://kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women-2003-2015/}
-"pw0315"
+"pregnant_women"
 
 #' Medicaid/CHIP Income Eligibility Limits for Children, 2000-2015
 #'
