@@ -1,11 +1,11 @@
 
-# Medicaid income cutoff for parents, 2002-2015 ---------------------------
+# Medicaid income cutoff for parents ---------------------------
 
 library(dplyr)
 
-pa0215 = readr::read_csv("data-raw/pa0215.csv", skip = 3)
+parents = readr::read_csv("data-raw/parents.csv", skip = 3)
 
-pa0215 = pa0215 %>%
+parents = parents %>%
   filter(Location != "United States") %>%
   rename(state = Location) %>%
   left_join(fips::fips, by = "state") %>%
@@ -14,4 +14,4 @@ pa0215 = pa0215 %>%
   tidyr::separate(year, c("month", "year")) %>%
   mutate(cutoff = as.integer(cutoff))
 
-devtools::use_data(pa0215, overwrite = TRUE)
+devtools::use_data(parents, overwrite = TRUE)

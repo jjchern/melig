@@ -1,7 +1,7 @@
 #' Medicaid Income Eligibility Limits for Parents, 2002-2015
 #'
 #' @source /url{http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents-2002-2015}
-"pa0215"
+"parents"
 
 #' Medicaid Income Eligibility Limits for Childless Adults, 2011-2016
 #'

@@ -7,7 +7,7 @@
 
 - `pw0315.csv`: [Medicaid and CHIP Income Eligibility Limits for Pregnant Women, 2003-2015](http://kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women-2003-2015/)
 
-- `pa0215.csv`: [Medicaid Income Eligibility Limits for Parents, 2002-2015](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents-2002-2015)
+- `parents.csv`: [Medicaid Income Eligibility Limits for Parents](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents-2002-2015)
 
 - `childless_adults.csv`:  [Medicaid Income Eligibility Limits for Other Non-Disabled Adults](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults-2011-2015/)
 
