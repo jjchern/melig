@@ -1,11 +1,11 @@
 
-# Medicaid income cutoff for childless adults, 2011-2015 ------------------------
+# Medicaid income cutoff for childless adults ------------------------
 
 library(dplyr)
 
-ca1115 = readr::read_csv("data-raw/ca1115.csv", skip = 3)
+childless_adults = readr::read_csv("data-raw/childless_adults.csv", skip = 3)
 
-ca1115 = ca1115 %>%
+childless_adults = childless_adults %>%
   filter(Location != "United States") %>%
   rename(state = Location) %>%
   left_join(fips::fips, by = "state") %>%
@@ -14,4 +14,4 @@ ca1115 = ca1115 %>%
   tidyr::separate(year, c("month", "year")) %>%
   mutate(cutoff = as.integer(cutoff))
 
-devtools::use_data(ca1115, overwrite = TRUE)
+devtools::use_data(childless_adults, overwrite = TRUE)

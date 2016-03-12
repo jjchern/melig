@@ -3,10 +3,10 @@
 #' @source /url{http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents-2002-2015}
 "pa0215"
 
-#' Medicaid Income Eligibility Limits for Childless Adults, 2011-2015
+#' Medicaid Income Eligibility Limits for Childless Adults, 2011-2016
 #'
 #' @source /url{http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults-2011-2015/}
-"ca1115"
+"childless_adults"
 
 #' Medicaid/CHIP Income Eligibility Limits for Pregnant Women, 2003-2015
 #'

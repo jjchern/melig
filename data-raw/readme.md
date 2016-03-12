@@ -9,7 +9,7 @@
 
 - `pa0215.csv`: [Medicaid Income Eligibility Limits for Parents, 2002-2015](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents-2002-2015)
 
-- `ca1115.csv`:  [Medicaid Income Eligibility Limits for Other Non-Disabled Adults, 2011-2015](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults-2011-2015/)
+- `childless_adults.csv`:  [Medicaid Income Eligibility Limits for Other Non-Disabled Adults](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults-2011-2015/)
 
 # R Scripts
 
