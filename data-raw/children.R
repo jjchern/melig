@@ -59,11 +59,11 @@ chip0_18 = chip0_18 %>%
   select(state, fips, usps, type, agegrp, everything())
 chip0_18
 
-ch0015 = infant0_1 %>%
+children = infant0_1 %>%
   bind_rows(children1_5) %>%
   bind_rows(children6_18) %>%
   bind_rows(chip0_18) %>%
   arrange(fips, year)
-ch0015
+children
 
-devtools::use_data(ch0015, overwrite = TRUE)
+devtools::use_data(children, overwrite = TRUE)

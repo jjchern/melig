@@ -16,4 +16,4 @@
 #' Medicaid/CHIP Income Eligibility Limits for Children, 2000-2015
 #'
 #' @source /url{http://kff.org/data-collection/trends-in-medicaid-income-eligibility-limits/}
-"ch0015"
+"children"
