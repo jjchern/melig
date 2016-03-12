@@ -6,15 +6,15 @@ About `melig`
 
 The R package `melig` contains information on **M**edicaid income **elig**ibility limits, collected by [the Kaiser Family Foundation](http://kff.org/data-collection/trends-in-medicaid-income-eligibility-limits/). It includes the following datasets:
 
--   `ch0015.rda`:
-    -   [Medicaid and CHIP Income Eligibility Limits for Children, 2000-2015](http://kff.org/medicaid/state-indicator/medicaidchip-upper-income-eligibility-limits-for-children-2000-2015/)
-    -   [Medicaid Income Eligibility Limits for Infants Ages 0 – 1, 2000-2015](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-infants-ages-0-1-2000-2015/)
-    -   [Medicaid Income Eligibility Limits for Children Ages 1 – 5, 2000-2015](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-children-ages-1-5-2000-2015/)
-    -   [Medicaid Income Eligibility Limits for Children Ages 6-18, 2000-2015](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-children-ages-6-18-2000-2015/)
-    -   [Separate Children’s Health Insurance Program (CHIP) Income Eligibility Limits for Children, 2000-2015](http://kff.org/medicaid/state-indicator/separate-childrens-health-insurance-program-chip-income-eligibility-limits-for-children-2000-2015/#)
--   `pw0315.rda`: [Medicaid and CHIP Income Eligibility Limits for Pregnant Women, 2003-2015](http://kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women-2003-2015/)
--   `pa0215.rda`: [Medicaid Income Eligibility Limits for Parents, 2002-2015](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents-2002-2015)
--   `ca1115.rda`: [Medicaid Income Eligibility Limits for Other Non-Disabled Adults, 2011-2015](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults-2011-2015/)
+-   `children.rda`:
+    -   [Medicaid and CHIP Income Eligibility Limits for Children, 2000-2016](http://kff.org/medicaid/state-indicator/medicaidchip-upper-income-eligibility-limits-for-children/)
+    -   [Medicaid Income Eligibility Limits for Infants Ages 0 – 1, 2000-2016](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-infants-ages-0-1/)
+    -   [Medicaid Income Eligibility Limits for Children Ages 1 – 5, 2000-2016](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-children-ages-1-5/)
+    -   [Medicaid Income Eligibility Limits for Children Ages 6-18, 2000-2016](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-children-ages-6-18/)
+    -   [Separate Children’s Health Insurance Program (CHIP) Income Eligibility Limits for Children, 2000-2016](http://kff.org/medicaid/state-indicator/separate-childrens-health-insurance-program-chip-income-eligibility-limits-for-children/)
+-   `prenant_wom.rda`: [Medicaid and CHIP Income Eligibility Limits for Pregnant Women, 2003-2016](http://kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women/)
+-   `parents.rda`: [Medicaid Income Eligibility Limits for Parents, 2002-2016](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents/)
+-   `childless_adults.rda`: [Medicaid Income Eligibility Limits for Other Non-Disabled Adults, 2011-2016](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/)
 
 The datasets have been [tidied](http://vita.had.co.nz/papers/tidy-data.pdf).
 
@@ -44,8 +44,8 @@ Long and Wide Formats
 library(dplyr)
 
 # the datasets have been tidied
-melig::pa0215
-#> Source: local data frame [663 x 6]
+melig::parents
+#> Source: local data frame [714 x 6]
 #> 
 #>                   state  fips  usps   month  year cutoff
 #>                   (chr) (int) (chr)   (chr) (chr)  (int)
@@ -62,10 +62,10 @@ melig::pa0215
 #> ..                  ...   ...   ...     ...   ...    ...
 
 # but you can covert it back to the original wide format
-melig::pa0215 %>% 
+melig::parents %>% 
   tidyr::unite_("monyear", c("month", "year"), sep = " ") %>% 
   tidyr::spread(monyear, cutoff)
-#> Source: local data frame [51 x 16]
+#> Source: local data frame [51 x 17]
 #> 
 #>                   state  fips  usps April 2003 December 2009 January 2002
 #>                   (chr) (int) (chr)      (int)         (int)        (int)
@@ -82,7 +82,8 @@ melig::pa0215 %>%
 #> ..                  ...   ...   ...        ...           ...          ...
 #> Variables not shown: January 2008 (int), January 2009 (int), January 2011
 #>   (int), January 2012 (int), January 2013 (int), January 2014 (int),
-#>   January 2015 (int), July 2004 (int), July 2005 (int), July 2006 (int)
+#>   January 2015 (int), January 2016 (int), July 2004 (int), July 2005
+#>   (int), July 2006 (int)
 ```
 
 States that Have Income Cutoff Greater Than 100 Federal Poverty Guidelines in 2014
@@ -90,7 +91,7 @@ States that Have Income Cutoff Greater Than 100 Federal Poverty Guidelines in 20
 
 ``` r
 # for parents
-melig::pa0215 %>% 
+melig::parents %>% 
   filter(year == 2014) %>% 
   filter(cutoff >= 100) %>% 
   select(state, fips, usps, pa_cutoff = cutoff) %>% 
@@ -299,7 +300,7 @@ melig::pa0215 %>%
 ``` r
 
 # for childless adults
-melig::ca1115 %>% 
+melig::childless_adults %>% 
   filter(year == 2014) %>% 
   filter(cutoff >= 100) %>% 
   select(state, fips, usps, ca_cutoff = cutoff) %>% 
@@ -490,7 +491,7 @@ melig::ca1115 %>%
 Income Cutoffs for Children
 ---------------------------
 
-*Note*: The children dataset, `melig::ch0015`, has
+*Note*: The children dataset, `melig::children`, has
 
 -   a `type` variable that separates Medicaid and CHIP programs, and
 -   an `agegrp` variable that indicates specific age groups.
@@ -499,8 +500,8 @@ Because the age information for the CHIP programs (`type == CHIP`) is not availa
 
 ``` r
 # the data
-melig::ch0015
-#> Source: local data frame [2,856 x 8]
+melig::children
+#> Source: local data frame [3,060 x 8]
 #> 
 #>      state  fips  usps     type agegrp   month  year cutoff
 #>      (chr) (int) (chr)    (chr)  (chr)   (chr) (chr)  (int)
@@ -517,9 +518,9 @@ melig::ch0015
 #> ..     ...   ...   ...      ...    ...     ...   ...    ...
 
 # IL
-melig::ch0015 %>% 
+melig::children %>% 
   filter(usps == "IL") 
-#> Source: local data frame [56 x 8]
+#> Source: local data frame [60 x 8]
 #> 
 #>       state  fips  usps     type agegrp   month  year cutoff
 #>       (chr) (int) (chr)    (chr)  (chr)   (chr) (chr)  (int)
@@ -541,10 +542,10 @@ Save as Other Data Formats
 
 ``` r
 # save as Stata format
-haven::write_dta(melig::pa0215, "pa0215.dta")
+haven::write_dta(melig::parents, "pa0216.dta")
 
 # or
-rio::export(melig::pa0215, "pa0215.dta")
+rio::export(melig::parents, "pa0216.dta")
 ```
 
 Or download the `*.rda` file and try the [rioweb](https://lbraglia.shinyapps.io/rioweb) made by [@lbraglia](<https://github.com/lbraglia>).
