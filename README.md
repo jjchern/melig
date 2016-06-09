@@ -144,7 +144,7 @@ melig::childless_adults %>%
   select(state, fips, usps, ca_cutoff = cutoff) %>% 
   formattable(
     list(ca_cutoff = normalize_bar("lightgreen", 0.2))
-  )
+  ) 
 ```
 
 |                 state|  fips|  usps|                                                                                                                                     ca\_cutoff|
