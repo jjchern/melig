@@ -43,6 +43,7 @@ Long and Wide Formats
 
 ``` r
 library(dplyr, warn.conflicts = FALSE)
+library(formattable)
 
 # the datasets have been tidied
 melig::parents
@@ -87,8 +88,8 @@ melig::parents %>%
 #>   <int>, July 2006 <int>.
 ```
 
-States that Have Income Cutoff Greater Than 100 Federal Poverty Guidelines in 2014
-----------------------------------------------------------------------------------
+States that Have Income Cutoffs Greater Than 100 Federal Poverty Guidelines in 2014
+-----------------------------------------------------------------------------------
 
 ``` r
 # for parents
@@ -96,207 +97,43 @@ melig::parents %>%
   filter(year == 2014) %>% 
   filter(cutoff >= 100) %>% 
   select(state, fips, usps, pa_cutoff = cutoff) %>% 
-  pander::pander()
+  formattable(
+    list(pa_cutoff = normalize_bar("lightgreen", 0.2))
+  )
 ```
 
-<table style="width:64%;">
-<colgroup>
-<col width="29%" />
-<col width="9%" />
-<col width="9%" />
-<col width="15%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">state</th>
-<th align="center">fips</th>
-<th align="center">usps</th>
-<th align="center">pa_cutoff</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">Alaska</td>
-<td align="center">2</td>
-<td align="center">AK</td>
-<td align="center">128</td>
-</tr>
-<tr class="even">
-<td align="center">Arizona</td>
-<td align="center">4</td>
-<td align="center">AZ</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Arkansas</td>
-<td align="center">5</td>
-<td align="center">AR</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">California</td>
-<td align="center">6</td>
-<td align="center">CA</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Colorado</td>
-<td align="center">8</td>
-<td align="center">CO</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Connecticut</td>
-<td align="center">9</td>
-<td align="center">CT</td>
-<td align="center">201</td>
-</tr>
-<tr class="odd">
-<td align="center">Delaware</td>
-<td align="center">10</td>
-<td align="center">DE</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">District of Columbia</td>
-<td align="center">11</td>
-<td align="center">DC</td>
-<td align="center">221</td>
-</tr>
-<tr class="odd">
-<td align="center">Hawaii</td>
-<td align="center">15</td>
-<td align="center">HI</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Illinois</td>
-<td align="center">17</td>
-<td align="center">IL</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Iowa</td>
-<td align="center">19</td>
-<td align="center">IA</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Kentucky</td>
-<td align="center">21</td>
-<td align="center">KY</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Maine</td>
-<td align="center">23</td>
-<td align="center">ME</td>
-<td align="center">105</td>
-</tr>
-<tr class="even">
-<td align="center">Maryland</td>
-<td align="center">24</td>
-<td align="center">MD</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Massachusetts</td>
-<td align="center">25</td>
-<td align="center">MA</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Michigan</td>
-<td align="center">26</td>
-<td align="center">MI</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Minnesota</td>
-<td align="center">27</td>
-<td align="center">MN</td>
-<td align="center">205</td>
-</tr>
-<tr class="even">
-<td align="center">Nevada</td>
-<td align="center">32</td>
-<td align="center">NV</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">New Jersey</td>
-<td align="center">34</td>
-<td align="center">NJ</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">New Mexico</td>
-<td align="center">35</td>
-<td align="center">NM</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">New York</td>
-<td align="center">36</td>
-<td align="center">NY</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">North Dakota</td>
-<td align="center">38</td>
-<td align="center">ND</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Ohio</td>
-<td align="center">39</td>
-<td align="center">OH</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Oregon</td>
-<td align="center">41</td>
-<td align="center">OR</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Rhode Island</td>
-<td align="center">44</td>
-<td align="center">RI</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Tennessee</td>
-<td align="center">47</td>
-<td align="center">TN</td>
-<td align="center">111</td>
-</tr>
-<tr class="odd">
-<td align="center">Vermont</td>
-<td align="center">50</td>
-<td align="center">VT</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Washington</td>
-<td align="center">53</td>
-<td align="center">WA</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">West Virginia</td>
-<td align="center">54</td>
-<td align="center">WV</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Wisconsin</td>
-<td align="center">55</td>
-<td align="center">WI</td>
-<td align="center">100</td>
-</tr>
-</tbody>
-</table>
+|                 state|  fips|  usps|                                                                                                                                     pa\_cutoff|
+|---------------------:|-----:|-----:|----------------------------------------------------------------------------------------------------------------------------------------------:|
+|                Alaska|     2|    AK|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 38.51%">128</span>|
+|               Arizona|     4|    AZ|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|              Arkansas|     5|    AR|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|            California|     6|    CA|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|              Colorado|     8|    CO|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|           Connecticut|     9|    CT|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 86.78%">201</span>|
+|              Delaware|    10|    DE|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|  District of Columbia|    11|    DC|  <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 100.00%">221</span>|
+|                Hawaii|    15|    HI|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|              Illinois|    17|    IL|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|                  Iowa|    19|    IA|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|              Kentucky|    21|    KY|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|                 Maine|    23|    ME|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 23.31%">105</span>|
+|              Maryland|    24|    MD|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|         Massachusetts|    25|    MA|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|              Michigan|    26|    MI|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|             Minnesota|    27|    MN|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 89.42%">205</span>|
+|                Nevada|    32|    NV|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|            New Jersey|    34|    NJ|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|            New Mexico|    35|    NM|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|              New York|    36|    NY|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|          North Dakota|    38|    ND|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|                  Ohio|    39|    OH|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|                Oregon|    41|    OR|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|          Rhode Island|    44|    RI|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|             Tennessee|    47|    TN|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 27.27%">111</span>|
+|               Vermont|    50|    VT|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|            Washington|    53|    WA|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|         West Virginia|    54|    WV|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>|
+|             Wisconsin|    55|    WI|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>|
 
 ``` r
 
@@ -305,189 +142,200 @@ melig::childless_adults %>%
   filter(year == 2014) %>% 
   filter(cutoff >= 100) %>% 
   select(state, fips, usps, ca_cutoff = cutoff) %>% 
-  pander::pander()
+  formattable(
+    list(ca_cutoff = normalize_bar("lightgreen", 0.2))
+  )
 ```
 
-<table style="width:64%;">
-<colgroup>
-<col width="29%" />
-<col width="9%" />
-<col width="9%" />
-<col width="15%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="center">state</th>
-<th align="center">fips</th>
-<th align="center">usps</th>
-<th align="center">ca_cutoff</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">Arizona</td>
-<td align="center">4</td>
-<td align="center">AZ</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Arkansas</td>
-<td align="center">5</td>
-<td align="center">AR</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">California</td>
-<td align="center">6</td>
-<td align="center">CA</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Colorado</td>
-<td align="center">8</td>
-<td align="center">CO</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Connecticut</td>
-<td align="center">9</td>
-<td align="center">CT</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Delaware</td>
-<td align="center">10</td>
-<td align="center">DE</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">District of Columbia</td>
-<td align="center">11</td>
-<td align="center">DC</td>
-<td align="center">215</td>
-</tr>
-<tr class="even">
-<td align="center">Hawaii</td>
-<td align="center">15</td>
-<td align="center">HI</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Illinois</td>
-<td align="center">17</td>
-<td align="center">IL</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Iowa</td>
-<td align="center">19</td>
-<td align="center">IA</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Kentucky</td>
-<td align="center">21</td>
-<td align="center">KY</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Maryland</td>
-<td align="center">24</td>
-<td align="center">MD</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Massachusetts</td>
-<td align="center">25</td>
-<td align="center">MA</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Michigan</td>
-<td align="center">26</td>
-<td align="center">MI</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Minnesota</td>
-<td align="center">27</td>
-<td align="center">MN</td>
-<td align="center">205</td>
-</tr>
-<tr class="even">
-<td align="center">Nevada</td>
-<td align="center">32</td>
-<td align="center">NV</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">New Jersey</td>
-<td align="center">34</td>
-<td align="center">NJ</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">New Mexico</td>
-<td align="center">35</td>
-<td align="center">NM</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">New York</td>
-<td align="center">36</td>
-<td align="center">NY</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">North Dakota</td>
-<td align="center">38</td>
-<td align="center">ND</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Ohio</td>
-<td align="center">39</td>
-<td align="center">OH</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Oregon</td>
-<td align="center">41</td>
-<td align="center">OR</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Rhode Island</td>
-<td align="center">44</td>
-<td align="center">RI</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">Vermont</td>
-<td align="center">50</td>
-<td align="center">VT</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Washington</td>
-<td align="center">53</td>
-<td align="center">WA</td>
-<td align="center">138</td>
-</tr>
-<tr class="even">
-<td align="center">West Virginia</td>
-<td align="center">54</td>
-<td align="center">WV</td>
-<td align="center">138</td>
-</tr>
-<tr class="odd">
-<td align="center">Wisconsin</td>
-<td align="center">55</td>
-<td align="center">WI</td>
-<td align="center">100</td>
-</tr>
-</tbody>
-</table>
+|                 state|  fips|  usps|                                                                                                                                     ca\_cutoff|
+|---------------------:|-----:|-----:|----------------------------------------------------------------------------------------------------------------------------------------------:|
+|               Arizona|     4|    AZ|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|              Arkansas|     5|    AR|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|            California|     6|    CA|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|              Colorado|     8|    CO|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|           Connecticut|     9|    CT|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|              Delaware|    10|    DE|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|  District of Columbia|    11|    DC|  <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 100.00%">215</span>|
+|                Hawaii|    15|    HI|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|              Illinois|    17|    IL|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|                  Iowa|    19|    IA|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|              Kentucky|    21|    KY|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|              Maryland|    24|    MD|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|         Massachusetts|    25|    MA|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|              Michigan|    26|    MI|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|             Minnesota|    27|    MN|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 93.04%">205</span>|
+|                Nevada|    32|    NV|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|            New Jersey|    34|    NJ|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|            New Mexico|    35|    NM|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|              New York|    36|    NY|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|          North Dakota|    38|    ND|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|                  Ohio|    39|    OH|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|                Oregon|    41|    OR|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|          Rhode Island|    44|    RI|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|               Vermont|    50|    VT|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|            Washington|    53|    WA|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|         West Virginia|    54|    WV|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 46.43%">138</span>|
+|             Wisconsin|    55|    WI|   <span style="display: block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>|
+
+Income Cutoffs for Parents in 2013--2015
+----------------------------------------
+
+``` r
+melig::parents %>% 
+  mutate(
+    year = if_else(year == "2009" & month == "December", "2010", year),
+    year = year %>% as.integer()
+  ) %>% 
+  filter(year %in% 2013:2015) %>% 
+  select(-month, -state) %>% 
+  tidyr::spread(year, cutoff) %>% 
+  rename(
+    pa_cutoff_2013 = `2013`,
+    pa_cutoff_2014 = `2014`,
+    pa_cutoff_2015 = `2015`
+  ) %>% 
+  formattable(
+    list(
+     pa_cutoff_2013 = color_tile("white", "orange"),
+     pa_cutoff_2014 = color_tile("white", "orange"),
+     pa_cutoff_2015 = color_tile("white", "orange")
+    )
+  )
+```
+
+|  fips|  usps|                                                                                                        pa\_cutoff\_2013|                                                                                                        pa\_cutoff\_2014|                                                                                                        pa\_cutoff\_2015|
+|-----:|-----:|-----------------------------------------------------------------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------------------:|
+|     1|    AL|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffbf6">23</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">16</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">18</span>|
+|     2|    AK|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffe2af">78</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffcd73">128</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc65e">146</span>|
+|     4|    AZ|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffd68b">106</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|     5|    AR|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">16</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|     6|    CA|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffd68b">106</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|     8|    CO|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffd68b">106</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|     9|    CT|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffaf1e">191</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffad18">201</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffad19">201</span>|
+|    10|    DE|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffcf79">120</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    11|    DC|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffa90b">206</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffa500">221</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffa500">221</span>|
+|    12|    FL|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffeccb">56</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff6e7">35</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff7ea">34</span>|
+|    13|    GA|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff0d5">48</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff4e2">39</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff6e5">38</span>|
+|    15|    HI|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc762">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    16|    ID|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff5e4">37</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffaf1">27</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffbf3">27</span>|
+|    17|    IL|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc761">139</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    18|    IN|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffbf4">24</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffbf5">24</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffcf7">24</span>|
+|    19|    IA|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffe2ac">80</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    20|    KS|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff8eb">31</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff5e3">38</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff6e5">38</span>|
+|    21|    KY|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffecca">57</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    22|    LA|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffbf4">24</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffbf5">24</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffcf7">24</span>|
+|    23|    ME|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffab13">200</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffd790">105</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffd891">105</span>|
+|    24|    MD|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffcf77">122</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    25|    MA|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffca69">133</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    26|    MI|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffe9c1">64</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    27|    MN|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffa500">215</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffac13">205</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    28|    MS|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff9ee">29</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff9ee">29</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffaf2">28</span>|
+|    29|    MO|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff6e6">35</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffbf5">24</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffcf8">23</span>|
+|    30|    MT|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffedce">54</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffefd2">52</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff0d5">51</span>|
+|    31|    NE|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffecc9">58</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffedce">55</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffeed0">55</span>|
+|    32|    NV|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffe0a7">84</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    33|    NH|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff0d7">47</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffe5b5">75</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    34|    NJ|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffab13">200</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    35|    NM|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffdfa6">85</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    36|    NY|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc253">150</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    37|    NC|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff0d7">47</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff2da">45</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff3dd">45</span>|
+|    38|    ND|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffecca">57</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    39|    OH|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffda98">96</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    40|    OK|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffefd2">51</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff0d7">48</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff2db">46</span>|
+|    41|    OR|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff4e1">39</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    42|    PA|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffecc9">58</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff5e3">38</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    44|    RI|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffb42b">181</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    45|    SC|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffdda1">89</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffe8bf">67</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffe9c1">67</span>|
+|    46|    SD|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffefd3">50</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffeecf">54</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffefd3">53</span>|
+|    47|    TN|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffcf77">122</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffd588">111</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffd994">103</span>|
+|    48|    TX|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffaf3">25</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffdfb">19</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fffefd">19</span>|
+|    49|    UT|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff3dd">42</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff1d8">47</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff2db">46</span>|
+|    50|    VT|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffaf1e">191</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    51|    VA|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff8ed">30</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffefd2">52</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff3dd">45</span>|
+|    53|    WA|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffe6b8">71</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    54|    WV|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff8eb">31</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc967">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc968">138</span>|
+|    55|    WI|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffab13">200</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffda96">100</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffda97">100</span>|
+|    56|    WY|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffefd3">50</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffecc9">59</span>|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffedcc">58</span>|
+
+Income Cutoffs for Childless Adults in 2013--2015
+-------------------------------------------------
+
+``` r
+melig::childless_adults %>% 
+  mutate(
+    year = if_else(year == "2009" & month == "December", "2010", year),
+    year = year %>% as.integer()
+  ) %>% 
+  filter(year %in% 2013:2015) %>% 
+  select(-month, -state) %>% 
+  tidyr::spread(year, cutoff) %>% 
+  rename(
+    ca_cutoff_2013 = `2013`,
+    ca_cutoff_2014 = `2014`,
+    ca_cutoff_2015 = `2015`
+  ) %>% 
+  formattable(
+    list(
+     ca_cutoff_2013 = color_tile("white", "orange"),
+     ca_cutoff_2014 = color_tile("white", "orange"),
+     ca_cutoff_2015 = color_tile("white", "orange")
+    )
+  )
+```
+
+|  fips|  usps|                                                                                                        ca\_cutoff\_2013|                                                                                                        ca\_cutoff\_2014|                                                                                                        ca\_cutoff\_2015|
+|-----:|-----:|-----------------------------------------------------------------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------------------:|
+|     1|    AL|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|     2|    AK|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|     4|    AZ|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffd486">100</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|     5|    AR|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|     6|    CA|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|     8|    CO|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #fff6e6">20</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|     9|    CT|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffe1aa">70</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    10|    DE|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffd07a">110</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    11|    DC|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffa500">211</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffa500">215</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffa500">215</span>|
+|    12|    FL|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    13|    GA|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    15|    HI|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffd486">100</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    16|    ID|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    17|    IL|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    18|    IN|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    19|    IA|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    20|    KS|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    21|    KY|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    22|    LA|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    23|    ME|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    24|    MD|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    25|    MA|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    26|    MI|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    27|    MN|   <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffdfa4">75</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffa90b">205</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    28|    MS|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    29|    MO|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    30|    MT|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    31|    NE|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    32|    NV|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    33|    NH|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    34|    NJ|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    35|    NM|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    36|    NY|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffd486">100</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    37|    NC|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    38|    ND|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    39|    OH|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    40|    OK|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    41|    OR|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    42|    PA|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    44|    RI|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    45|    SC|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    46|    SD|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    47|    TN|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    48|    TX|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    49|    UT|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    50|    VT|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffba3d">160</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    51|    VA|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
+|    53|    WA|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    54|    WV|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffc55b">138</span>|
+|    55|    WI|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffd588">100</span>|  <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffd588">100</span>|
+|    56|    WY|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|    <span style="display: block; padding: 0 4px; direction: rtl; border-radius: 4px; background-color: #ffffff">0</span>|
 
 Income Cutoffs for Children
 ---------------------------

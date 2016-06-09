@@ -51,6 +51,7 @@ devtools::install_github("jjchern/melig")
 
 ```{r, message=FALSE, warning=FALSE}
 library(dplyr, warn.conflicts = FALSE)
+library(formattable)
 
 # the datasets have been tidied
 melig::parents
@@ -61,7 +62,7 @@ melig::parents %>%
   tidyr::spread(monyear, cutoff)
 ```
 
-## States that Have Income Cutoff Greater Than 100 Federal Poverty Guidelines in 2014
+## States that Have Income Cutoffs Greater Than 100 Federal Poverty Guidelines in 2014
 
 ```{r, message=FALSE, warning=FALSE}
 # for parents
@@ -69,14 +70,68 @@ melig::parents %>%
   filter(year == 2014) %>% 
   filter(cutoff >= 100) %>% 
   select(state, fips, usps, pa_cutoff = cutoff) %>% 
-  pander::pander()
+  formattable(
+    list(pa_cutoff = normalize_bar("lightgreen", 0.2))
+  )
 
 # for childless adults
 melig::childless_adults %>% 
   filter(year == 2014) %>% 
   filter(cutoff >= 100) %>% 
   select(state, fips, usps, ca_cutoff = cutoff) %>% 
-  pander::pander()
+  formattable(
+    list(ca_cutoff = normalize_bar("lightgreen", 0.2))
+  )
+```
+
+## Income Cutoffs for Parents in 2013--2015
+
+```{r}
+melig::parents %>% 
+  mutate(
+    year = if_else(year == "2009" & month == "December", "2010", year),
+    year = year %>% as.integer()
+  ) %>% 
+  filter(year %in% 2013:2015) %>% 
+  select(-month, -state) %>% 
+  tidyr::spread(year, cutoff) %>% 
+  rename(
+    pa_cutoff_2013 = `2013`,
+    pa_cutoff_2014 = `2014`,
+    pa_cutoff_2015 = `2015`
+  ) %>% 
+  formattable(
+    list(
+     pa_cutoff_2013 = color_tile("white", "orange"),
+     pa_cutoff_2014 = color_tile("white", "orange"),
+     pa_cutoff_2015 = color_tile("white", "orange")
+    )
+  )
+```
+
+## Income Cutoffs for Childless Adults in 2013--2015
+
+```{r}
+melig::childless_adults %>% 
+  mutate(
+    year = if_else(year == "2009" & month == "December", "2010", year),
+    year = year %>% as.integer()
+  ) %>% 
+  filter(year %in% 2013:2015) %>% 
+  select(-month, -state) %>% 
+  tidyr::spread(year, cutoff) %>% 
+  rename(
+    ca_cutoff_2013 = `2013`,
+    ca_cutoff_2014 = `2014`,
+    ca_cutoff_2015 = `2015`
+  ) %>% 
+  formattable(
+    list(
+     ca_cutoff_2013 = color_tile("white", "orange"),
+     ca_cutoff_2014 = color_tile("white", "orange"),
+     ca_cutoff_2015 = color_tile("white", "orange")
+    )
+  )
 ```
 
 ## Income Cutoffs for Children
