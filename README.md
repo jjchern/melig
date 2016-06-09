@@ -1,3 +1,4 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 [![Travis-CI Build Status](https://travis-ci.org/jjchern/melig.svg?branch=master)](https://travis-ci.org/jjchern/melig)
 
@@ -41,14 +42,14 @@ Long and Wide Formats
 ---------------------
 
 ``` r
-library(dplyr)
+library(dplyr, warn.conflicts = FALSE)
 
 # the datasets have been tidied
 melig::parents
 #> Source: local data frame [714 x 6]
 #> 
 #>                   state  fips  usps   month  year cutoff
-#>                   (chr) (int) (chr)   (chr) (chr)  (int)
+#>                   <chr> <int> <chr>   <chr> <chr>  <int>
 #> 1               Alabama     1    AL January  2002     21
 #> 2                Alaska     2    AK January  2002     79
 #> 3               Arizona     4    AZ January  2002    107
@@ -68,7 +69,7 @@ melig::parents %>%
 #> Source: local data frame [51 x 17]
 #> 
 #>                   state  fips  usps April 2003 December 2009 January 2002
-#>                   (chr) (int) (chr)      (int)         (int)        (int)
+#> *                 <chr> <int> <chr>      <int>         <int>        <int>
 #> 1               Alabama     1    AL         20            24           21
 #> 2                Alaska     2    AK         81            81           79
 #> 3               Arizona     4    AZ        200           106          107
@@ -80,10 +81,10 @@ melig::parents %>%
 #> 9  District of Columbia    11    DC        200           207          200
 #> 10              Florida    12    FL         63            53           66
 #> ..                  ...   ...   ...        ...           ...          ...
-#> Variables not shown: January 2008 (int), January 2009 (int), January 2011
-#>   (int), January 2012 (int), January 2013 (int), January 2014 (int),
-#>   January 2015 (int), January 2016 (int), July 2004 (int), July 2005
-#>   (int), July 2006 (int)
+#> Variables not shown: January 2008 <int>, January 2009 <int>, January 2011
+#>   <int>, January 2012 <int>, January 2013 <int>, January 2014 <int>,
+#>   January 2015 <int>, January 2016 <int>, July 2004 <int>, July 2005
+#>   <int>, July 2006 <int>.
 ```
 
 States that Have Income Cutoff Greater Than 100 Federal Poverty Guidelines in 2014
@@ -98,7 +99,7 @@ melig::parents %>%
   pander::pander()
 ```
 
-<table>
+<table style="width:64%;">
 <colgroup>
 <col width="29%" />
 <col width="9%" />
@@ -307,7 +308,7 @@ melig::childless_adults %>%
   pander::pander()
 ```
 
-<table>
+<table style="width:64%;">
 <colgroup>
 <col width="29%" />
 <col width="9%" />
@@ -504,7 +505,7 @@ melig::children
 #> Source: local data frame [3,060 x 8]
 #> 
 #>      state  fips  usps     type agegrp   month  year cutoff
-#>      (chr) (int) (chr)    (chr)  (chr)   (chr) (chr)  (int)
+#>      <chr> <int> <chr>    <chr>  <chr>   <chr> <chr>  <int>
 #> 1  Alabama     1    AL Medicaid    0-1 October  2000    133
 #> 2  Alabama     1    AL Medicaid    1-5 October  2000    133
 #> 3  Alabama     1    AL Medicaid   6-18 October  2000    100
@@ -523,7 +524,7 @@ melig::children %>%
 #> Source: local data frame [60 x 8]
 #> 
 #>       state  fips  usps     type agegrp   month  year cutoff
-#>       (chr) (int) (chr)    (chr)  (chr)   (chr) (chr)  (int)
+#>       <chr> <int> <chr>    <chr>  <chr>   <chr> <chr>  <int>
 #> 1  Illinois    17    IL Medicaid    0-1 October  2000    200
 #> 2  Illinois    17    IL Medicaid    1-5 October  2000    133
 #> 3  Illinois    17    IL Medicaid   6-18 October  2000    133
@@ -548,4 +549,4 @@ haven::write_dta(melig::parents, "pa0216.dta")
 rio::export(melig::parents, "pa0216.dta")
 ```
 
-Or download the `*.rda` file and try the [rioweb](https://lbraglia.shinyapps.io/rioweb) made by [@lbraglia](<https://github.com/lbraglia>).
+Or download the `*.rda` file and try the [rioweb](https://lbraglia.shinyapps.io/rioweb) made by \[@lbraglia\](<https://github.com/lbraglia>).

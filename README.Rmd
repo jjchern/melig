@@ -1,7 +1,5 @@
 ---
-output:
-  md_document:
-    variant: markdown_github
+output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -52,7 +50,7 @@ devtools::install_github("jjchern/melig")
 ## Long and Wide Formats
 
 ```{r, message=FALSE, warning=FALSE}
-library(dplyr)
+library(dplyr, warn.conflicts = FALSE)
 
 # the datasets have been tidied
 melig::parents
