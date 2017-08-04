@@ -10,6 +10,19 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "README-"
 )
+
+# Source: https://stackoverflow.com/questions/34983822/how-to-have-r-formattable-rendered-to-pdf-output-and-how-to-have-percents-in-the
+export_formattable <- function(f, file, width = "100%", height = NULL, 
+                               background = "white", delay = 0.2)
+{
+  w <- as.htmlwidget(f, width = width, height = height)
+  path <- htmltools::html_print(w, background = background, viewer = NULL)
+  url <- paste0("file:///", gsub("\\\\", "/", normalizePath(path)))
+  webshot::webshot(url,
+          file = file,
+          selector = ".formattable_widget",
+          delay = delay)
+}
 ```
 
 [![Travis-CI Build Status](https://travis-ci.org/jjchern/melig.svg?branch=master)](https://travis-ci.org/jjchern/melig)
@@ -84,54 +97,63 @@ melig::childless_adults %>%
   ) 
 ```
 
-## Income Cutoffs for Parents in 2013--2015
+## Income Cutoffs for Parents in 2010--2015
 
-```{r}
+```{r pa_cutoffs}
 melig::parents %>% 
   mutate(
     year = if_else(year == "2009" & month == "December", "2010", year),
     year = year %>% as.integer()
   ) %>% 
-  filter(year %in% 2013:2015) %>% 
-  select(-month, -state) %>% 
+  filter(year %in% 2010:2015) %>% 
+  select(-month, -state, -fips) %>% 
   tidyr::spread(year, cutoff) %>% 
   rename(
-    pa_cutoff_2013 = `2013`,
-    pa_cutoff_2014 = `2014`,
-    pa_cutoff_2015 = `2015`
+    pa_2010 = `2010`,
+    pa_2011 = `2011`,
+    pa_2012 = `2012`,
+    pa_2013 = `2013`,
+    pa_2014 = `2014`,
+    pa_2015 = `2015`
   ) %>% 
   formattable(
     list(
-     pa_cutoff_2013 = color_tile("white", "orange"),
-     pa_cutoff_2014 = color_tile("white", "orange"),
-     pa_cutoff_2015 = color_tile("white", "orange")
+     pa_2010 = color_tile("white", "orange"),
+     pa_2011 = color_tile("white", "orange"),
+     pa_2012 = color_tile("white", "orange"),
+     pa_2013 = color_tile("white", "orange"),
+     pa_2014 = color_tile("white", "orange"),
+     pa_2015 = color_tile("white", "orange")
     )
-  )
+  ) %>% 
+  export_formattable("pa_cutoffs.png")
 ```
 
-## Income Cutoffs for Childless Adults in 2013--2015
+## Income Cutoffs for Childless Adults in 2011--2015
 
-```{r}
+```{r ca_cutoffs}
 melig::childless_adults %>% 
-  mutate(
-    year = if_else(year == "2009" & month == "December", "2010", year),
-    year = year %>% as.integer()
-  ) %>% 
-  filter(year %in% 2013:2015) %>% 
-  select(-month, -state) %>% 
+  mutate(year = as.integer(year)) %>% 
+  filter(year %in% 2011:2015) %>% 
+  select(-month, -state, -fips) %>% 
   tidyr::spread(year, cutoff) %>% 
   rename(
-    ca_cutoff_2013 = `2013`,
-    ca_cutoff_2014 = `2014`,
-    ca_cutoff_2015 = `2015`
+    ca_2011 = `2011`,
+    ca_2012 = `2012`,
+    ca_2013 = `2013`,
+    ca_2014 = `2014`,
+    ca_2015 = `2015`
   ) %>% 
   formattable(
     list(
-     ca_cutoff_2013 = color_tile("white", "orange"),
-     ca_cutoff_2014 = color_tile("white", "orange"),
-     ca_cutoff_2015 = color_tile("white", "orange")
+      ca_2011 = color_tile("white", "orange"),
+      ca_2012 = color_tile("white", "orange"),
+      ca_2013 = color_tile("white", "orange"),
+      ca_2014 = color_tile("white", "orange"),
+      ca_2015 = color_tile("white", "orange")
     )
-  )
+  ) %>% 
+  export_formattable("ca_cutoffs.png") 
 ```
 
 ## Income Cutoffs for Children
