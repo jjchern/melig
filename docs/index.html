@@ -133,16 +133,16 @@
 <a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; # A tibble: 816 x 6</span></a>
 <a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt;    state                fips  usps  month   year  cutoff</span></a>
 <a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt;    &lt;chr&gt;                &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;  1 Alabama              01    AL    January 2002       0</span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt;  2 Alaska               02    AK    January 2002       0</span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;  3 Arizona              04    AZ    January 2002     100</span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;  4 Arkansas             05    AR    January 2002       0</span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;  5 California           06    CA    January 2002     100</span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt;  6 Colorado             08    CO    January 2002       0</span></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt;  7 Connecticut          09    CT    January 2002     100</span></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt;  8 Delaware             10    DE    January 2002     100</span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;  1 Alabama              01    AL    January 2002      21</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt;  2 Alaska               02    AK    January 2002      79</span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;  3 Arizona              04    AZ    January 2002     107</span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;  4 Arkansas             05    AR    January 2002      21</span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;  5 California           06    CA    January 2002     107</span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt;  6 Colorado             08    CO    January 2002      42</span></a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt;  7 Connecticut          09    CT    January 2002     157</span></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt;  8 Delaware             10    DE    January 2002     122</span></a>
 <a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt;  9 District of Columbia 11    DC    January 2002     200</span></a>
-<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; 10 Florida              12    FL    January 2002       0</span></a>
+<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; 10 Florida              12    FL    January 2002      66</span></a>
 <a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co">#&gt; # … with 806 more rows</span></a>
 <a class="sourceLine" id="cb2-20" data-line-number="20"></a>
 <a class="sourceLine" id="cb2-21" data-line-number="21"><span class="co"># but you can covert it back to the original wide format</span></a>
@@ -152,16 +152,16 @@
 <a class="sourceLine" id="cb2-25" data-line-number="25"><span class="co">#&gt; # A tibble: 51 x 19</span></a>
 <a class="sourceLine" id="cb2-26" data-line-number="26"><span class="co">#&gt;    state fips  usps  `April 2003` `December 2009` `January 2002`</span></a>
 <a class="sourceLine" id="cb2-27" data-line-number="27"><span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;        &lt;dbl&gt;           &lt;dbl&gt;          &lt;dbl&gt;</span></a>
-<a class="sourceLine" id="cb2-28" data-line-number="28"><span class="co">#&gt;  1 Alab… 01    AL               0               0              0</span></a>
-<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co">#&gt;  2 Alas… 02    AK               0               0              0</span></a>
-<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="co">#&gt;  3 Ariz… 04    AZ             200             100            100</span></a>
-<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt;  4 Arka… 05    AR               0               0              0</span></a>
-<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt;  5 Cali… 06    CA             100             100            100</span></a>
-<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt;  6 Colo… 08    CO               0               0              0</span></a>
-<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt;  7 Conn… 09    CT             100             100            100</span></a>
-<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt;  8 Dela… 10    DE             100             100            100</span></a>
-<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt;  9 Dist… 11    DC             200             200            200</span></a>
-<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt; 10 Flor… 12    FL               0               0              0</span></a>
+<a class="sourceLine" id="cb2-28" data-line-number="28"><span class="co">#&gt;  1 Alab… 01    AL              20             24              21</span></a>
+<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co">#&gt;  2 Alas… 02    AK              81             81              79</span></a>
+<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="co">#&gt;  3 Ariz… 04    AZ             200            106             107</span></a>
+<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt;  4 Arka… 05    AR              20             17              21</span></a>
+<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt;  5 Cali… 06    CA             107            106             107</span></a>
+<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt;  6 Colo… 08    CO              47             66              42</span></a>
+<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt;  7 Conn… 09    CT             107            191             157</span></a>
+<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt;  8 Dela… 10    DE             120            121             122</span></a>
+<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt;  9 Dist… 11    DC             200            207.            200</span></a>
+<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt; 10 Flor… 12    FL              63             53              66</span></a>
 <a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt; # … with 41 more rows, and 13 more variables: `January 2008` &lt;dbl&gt;,</span></a>
 <a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt; #   `January 2009` &lt;dbl&gt;, `January 2011` &lt;dbl&gt;, `January 2012` &lt;dbl&gt;,</span></a>
 <a class="sourceLine" id="cb2-40" data-line-number="40"><span class="co">#&gt; #   `January 2013` &lt;dbl&gt;, `January 2014` &lt;dbl&gt;, `January 2015` &lt;dbl&gt;,</span></a>
@@ -204,7 +204,7 @@ Alaska
 AK
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 38.51%">128</span>
 </td>
 </tr>
 <tr>
@@ -218,7 +218,7 @@ Arizona
 AZ
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -232,7 +232,7 @@ Arkansas
 AR
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -246,7 +246,7 @@ California
 CA
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -260,7 +260,7 @@ Colorado
 CO
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -274,7 +274,7 @@ Connecticut
 CT
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 100.00%">200</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 86.78%">201</span>
 </td>
 </tr>
 <tr>
@@ -288,7 +288,7 @@ Delaware
 DE
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -302,7 +302,7 @@ District of Columbia
 DC
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 100.00%">200</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 100.00%">221</span>
 </td>
 </tr>
 <tr>
@@ -316,7 +316,7 @@ Hawaii
 HI
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -330,7 +330,7 @@ Illinois
 IL
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -344,7 +344,7 @@ Iowa
 IA
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -358,7 +358,7 @@ Kentucky
 KY
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -372,7 +372,7 @@ Maine
 ME
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 23.31%">105</span>
 </td>
 </tr>
 <tr>
@@ -386,7 +386,7 @@ Maryland
 MD
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -400,7 +400,7 @@ Massachusetts
 MA
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -414,7 +414,7 @@ Michigan
 MI
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -428,7 +428,7 @@ Minnesota
 MN
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 100.00%">200</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 89.42%">205</span>
 </td>
 </tr>
 <tr>
@@ -442,7 +442,7 @@ Nevada
 NV
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -456,7 +456,7 @@ New Jersey
 NJ
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -470,7 +470,7 @@ New Mexico
 NM
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -484,7 +484,7 @@ New York
 NY
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -498,7 +498,7 @@ North Dakota
 ND
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -512,7 +512,7 @@ Ohio
 OH
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -526,7 +526,7 @@ Oregon
 OR
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -540,7 +540,7 @@ Rhode Island
 RI
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -554,7 +554,7 @@ Tennessee
 TN
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 27.27%">111</span>
 </td>
 </tr>
 <tr>
@@ -568,7 +568,7 @@ Vermont
 VT
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -582,7 +582,7 @@ Washington
 WA
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -596,7 +596,7 @@ West Virginia
 WV
 </td>
 <td style="text-align:right;">
-<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 20.00%">100</span>
+<span style="display: inline-block; direction: rtl; border-radius: 4px; padding-right: 2px; background-color: lightgreen; width: 45.12%">138</span>
 </td>
 </tr>
 <tr>
@@ -1019,15 +1019,15 @@ WI
 </tbody>
 </table>
 </div>
-<div id="income-cutoffs-for-parents-in-20102015" class="section level2">
+<div id="income-cutoffs-for-parents-in-20102018" class="section level2">
 <h2 class="hasAnchor">
-<a href="#income-cutoffs-for-parents-in-20102015" class="anchor"></a>Income Cutoffs for Parents in 2010–2015</h2>
+<a href="#income-cutoffs-for-parents-in-20102018" class="anchor"></a>Income Cutoffs for Parents in 2010–2018</h2>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">melig<span class="op">::</span>parents <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb5-2" data-line-number="2"><span class="st">  </span><span class="kw">mutate</span>(</a>
 <a class="sourceLine" id="cb5-3" data-line-number="3">    <span class="dt">year =</span> <span class="kw">if_else</span>(year <span class="op">==</span><span class="st"> "2009"</span> <span class="op">&amp;</span><span class="st"> </span>month <span class="op">==</span><span class="st"> "December"</span>, <span class="st">"2010"</span>, year),</a>
 <a class="sourceLine" id="cb5-4" data-line-number="4">    <span class="dt">year =</span> year <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/integer">as.integer</a></span>()</a>
 <a class="sourceLine" id="cb5-5" data-line-number="5">  ) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/filter">filter</a></span>(year <span class="op">%in%</span><span class="st"> </span><span class="dv">2010</span><span class="op">:</span><span class="dv">2015</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/filter">filter</a></span>(year <span class="op">%in%</span><span class="st"> </span><span class="dv">2010</span><span class="op">:</span><span class="dv">2018</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb5-7" data-line-number="7"><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>month, <span class="op">-</span>state, <span class="op">-</span>fips) <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb5-8" data-line-number="8"><span class="st">  </span>tidyr<span class="op">::</span><span class="kw"><a href="https://tidyr.tidyverse.org/reference/spread.html">spread</a></span>(year, cutoff) <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb5-9" data-line-number="9"><span class="st">  </span><span class="kw">rename</span>(</a>
@@ -1036,18 +1036,24 @@ WI
 <a class="sourceLine" id="cb5-12" data-line-number="12">    <span class="dt">pa_2012 =</span> <span class="st">`</span><span class="dt">2012</span><span class="st">`</span>,</a>
 <a class="sourceLine" id="cb5-13" data-line-number="13">    <span class="dt">pa_2013 =</span> <span class="st">`</span><span class="dt">2013</span><span class="st">`</span>,</a>
 <a class="sourceLine" id="cb5-14" data-line-number="14">    <span class="dt">pa_2014 =</span> <span class="st">`</span><span class="dt">2014</span><span class="st">`</span>,</a>
-<a class="sourceLine" id="cb5-15" data-line-number="15">    <span class="dt">pa_2015 =</span> <span class="st">`</span><span class="dt">2015</span><span class="st">`</span></a>
-<a class="sourceLine" id="cb5-16" data-line-number="16">  ) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb5-17" data-line-number="17"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/formattable">formattable</a></span>(</a>
-<a class="sourceLine" id="cb5-18" data-line-number="18">    <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</a>
-<a class="sourceLine" id="cb5-19" data-line-number="19">     <span class="dt">pa_2010 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
-<a class="sourceLine" id="cb5-20" data-line-number="20">     <span class="dt">pa_2011 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
-<a class="sourceLine" id="cb5-21" data-line-number="21">     <span class="dt">pa_2012 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
-<a class="sourceLine" id="cb5-22" data-line-number="22">     <span class="dt">pa_2013 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
-<a class="sourceLine" id="cb5-23" data-line-number="23">     <span class="dt">pa_2014 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
-<a class="sourceLine" id="cb5-24" data-line-number="24">     <span class="dt">pa_2015 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>)</a>
-<a class="sourceLine" id="cb5-25" data-line-number="25">    )</a>
-<a class="sourceLine" id="cb5-26" data-line-number="26">  ) </a></code></pre></div>
+<a class="sourceLine" id="cb5-15" data-line-number="15">    <span class="dt">pa_2015 =</span> <span class="st">`</span><span class="dt">2015</span><span class="st">`</span>,</a>
+<a class="sourceLine" id="cb5-16" data-line-number="16">    <span class="dt">pa_2016 =</span> <span class="st">`</span><span class="dt">2016</span><span class="st">`</span>,</a>
+<a class="sourceLine" id="cb5-17" data-line-number="17">    <span class="dt">pa_2017 =</span> <span class="st">`</span><span class="dt">2017</span><span class="st">`</span>,</a>
+<a class="sourceLine" id="cb5-18" data-line-number="18">    <span class="dt">pa_2018 =</span> <span class="st">`</span><span class="dt">2018</span><span class="st">`</span></a>
+<a class="sourceLine" id="cb5-19" data-line-number="19">  ) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb5-20" data-line-number="20"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/formattable">formattable</a></span>(</a>
+<a class="sourceLine" id="cb5-21" data-line-number="21">    <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</a>
+<a class="sourceLine" id="cb5-22" data-line-number="22">     <span class="dt">pa_2010 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb5-23" data-line-number="23">     <span class="dt">pa_2011 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb5-24" data-line-number="24">     <span class="dt">pa_2012 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb5-25" data-line-number="25">     <span class="dt">pa_2013 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb5-26" data-line-number="26">     <span class="dt">pa_2014 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb5-27" data-line-number="27">     <span class="dt">pa_2015 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb5-28" data-line-number="28">     <span class="dt">pa_2016 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb5-29" data-line-number="29">     <span class="dt">pa_2017 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb5-30" data-line-number="30">     <span class="dt">pa_2018 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>)</a>
+<a class="sourceLine" id="cb5-31" data-line-number="31">    )</a>
+<a class="sourceLine" id="cb5-32" data-line-number="32">  ) </a></code></pre></div>
 <table class="table table table table-condensed">
 <thead><tr>
 <th style="text-align:right;">
@@ -1071,6 +1077,15 @@ pa_2014
 <th style="text-align:right;">
 pa_2015
 </th>
+<th style="text-align:right;">
+pa_2016
+</th>
+<th style="text-align:right;">
+pa_2017
+</th>
+<th style="text-align:right;">
+pa_2018
+</th>
 </tr></thead>
 <tbody>
 <tr>
@@ -1078,22 +1093,31 @@ pa_2015
 AK
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe1ac">81</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe1ac">81</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe1ac">81</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe2af">78</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffcd73">128</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc65e">146</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc761">143</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc864">141</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">139</span>
 </td>
 </tr>
 <tr>
@@ -1101,22 +1125,31 @@ AK
 AL
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf5">24</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf5">24</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf5">24</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf6">23</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">16</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">18</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">18</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">18</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">18</span>
 </td>
 </tr>
 <tr>
@@ -1124,22 +1157,31 @@ AL
 AR
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">17</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">17</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">17</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">16</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1147,22 +1189,31 @@ AR
 AZ
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd68c">106</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd68c">106</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd68c">106</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd68b">106</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1170,22 +1221,31 @@ AZ
 CA
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd68c">106</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd68c">106</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd68c">106</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd68b">106</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1193,22 +1253,31 @@ CA
 CO
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe8bf">66</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd68c">106</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd68c">106</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd68b">106</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1216,22 +1285,31 @@ CO
 CT
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaf1e">191</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaf1e">191</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaf1e">191</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaf1e">191</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad18">201</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffad19">201</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc252">155</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc252">155</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1239,22 +1317,31 @@ CT
 DC
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa80a">207</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa80a">207</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa90b">206</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa90b">206</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">221</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">221</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">221</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">221</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">221</span>
 </td>
 </tr>
 <tr>
@@ -1262,22 +1349,31 @@ DC
 DE
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffcf79">121</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd07a">120</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd07b">119</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffcf79">120</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1285,22 +1381,31 @@ DE
 FL
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffeed0">53</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffebc8">59</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffecca">58</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffeccb">56</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff6e7">35</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff7ea">34</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff7ea">34</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff8ec">33</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff8ec">33</span>
 </td>
 </tr>
 <tr>
@@ -1308,22 +1413,31 @@ FL
 GA
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d4">50</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d4">50</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d5">49</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d5">48</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff4e2">39</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff6e5">38</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff6e7">37</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff6e7">37</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff7e8">36</span>
 </td>
 </tr>
 <tr>
@@ -1331,22 +1445,31 @@ GA
 HI
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd994">100</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd994">100</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd994">100</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc762">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1354,22 +1477,31 @@ HI
 IA
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe1aa">83</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe1aa">83</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe1ab">82</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe2ac">80</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1377,22 +1509,31 @@ IA
 ID
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffaf2">27</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff5e2">39</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff5e2">39</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff5e4">37</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffaf1">27</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf3">27</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf4">26</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf4">26</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf4">26</span>
 </td>
 </tr>
 <tr>
@@ -1400,22 +1541,31 @@ ID
 IL
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb226">185</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaf1e">191</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaf1e">191</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc761">139</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1423,22 +1573,31 @@ IL
 IN
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf4">25</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff6e6">36</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf5">24</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf4">24</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf5">24</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffcf7">24</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">139</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">139</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">139</span>
 </td>
 </tr>
 <tr>
@@ -1446,22 +1605,31 @@ IN
 KS
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff8eb">32</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff8eb">32</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff8eb">32</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff8eb">31</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff5e3">38</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff6e5">38</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff6e5">38</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff6e5">38</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff6e5">38</span>
 </td>
 </tr>
 <tr>
@@ -1469,22 +1637,31 @@ KS
 KY
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffeac5">62</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffeac5">62</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffebc8">59</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffecca">57</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1492,22 +1669,31 @@ KY
 LA
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf4">25</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf4">25</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf4">25</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf4">24</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf5">24</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffcf7">24</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffcf7">24</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1515,22 +1701,31 @@ LA
 MA
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffca69">133</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffca69">133</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffca69">133</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffca69">133</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1538,22 +1733,31 @@ MA
 MD
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">116</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">116</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">116</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffcf77">122</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1561,22 +1765,31 @@ MD
 ME
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa90b">206</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffab13">200</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffab13">200</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffab13">200</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd790">105</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd891">105</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd891">105</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd891">105</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd891">105</span>
 </td>
 </tr>
 <tr>
@@ -1584,22 +1797,31 @@ ME
 MI
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe9c2">64</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe9c2">64</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffeac3">63</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe9c1">64</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1607,22 +1829,31 @@ MI
 MN
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">215</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">215</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">215</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">215</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffac13">205</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1630,22 +1861,31 @@ MN
 MO
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf4">25</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff5e5">37</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff6e6">36</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff6e6">35</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf5">24</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffcf8">23</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffdf9">22</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffdf9">22</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffdf9">22</span>
 </td>
 </tr>
 <tr>
@@ -1653,22 +1893,31 @@ MO
 MS
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff2dc">44</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff2dc">44</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff2dc">44</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff9ee">29</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff9ee">29</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffaf2">28</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf3">27</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf3">27</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffbf3">27</span>
 </td>
 </tr>
 <tr>
@@ -1676,22 +1925,31 @@ MS
 MT
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedcc">56</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedcc">56</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedce">55</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedce">54</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffefd2">52</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d5">51</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1699,22 +1957,31 @@ MT
 NC
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d5">49</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d5">49</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d5">49</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d7">47</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff2da">45</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff3dd">45</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff3de">44</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff3de">44</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff3df">43</span>
 </td>
 </tr>
 <tr>
@@ -1722,22 +1989,31 @@ NC
 ND
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffebc8">59</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffebc8">59</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffebc8">59</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffecca">57</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1745,22 +2021,31 @@ ND
 NE
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffecca">58</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffecca">58</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffeccb">57</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffecc9">58</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedce">55</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffeed0">55</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffebc6">63</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffebc6">63</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffebc6">63</span>
 </td>
 </tr>
 <tr>
@@ -1768,22 +2053,31 @@ NE
 NH
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d5">49</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d5">49</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d5">49</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d7">47</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe5b5">75</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1791,22 +2085,31 @@ NH
 NJ
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffab13">200</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffab13">200</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffab13">200</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffab13">200</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1814,22 +2117,31 @@ NJ
 NM
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe8be">67</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe8be">67</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe0a7">85</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdfa6">85</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1837,22 +2149,31 @@ NM
 NV
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdea3">88</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdea3">88</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdfa4">87</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe0a7">84</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1860,22 +2181,31 @@ NV
 NY
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc253">150</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc253">150</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc253">150</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc253">150</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1883,22 +2213,31 @@ NY
 OH
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdda0">90</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdda0">90</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdda0">90</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffda98">96</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1906,22 +2245,31 @@ OH
 OK
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff1d8">47</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffeed0">53</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffeed0">53</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffefd2">51</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d7">48</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff2db">46</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff3de">44</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff3de">44</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff3dd">45</span>
 </td>
 </tr>
 <tr>
@@ -1929,22 +2277,31 @@ OK
 OR
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff4e1">40</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff4e1">40</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff4e1">40</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff4e1">39</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1952,22 +2309,31 @@ OR
 PA
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff7e9">34</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff1d9">46</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff1d9">46</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffecc9">58</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff5e3">38</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1975,22 +2341,31 @@ PA
 RI
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb42b">181</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb42b">181</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb42b">181</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffb42b">181</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -1998,22 +2373,31 @@ RI
 SC
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdea2">89</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdc9d">93</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdd9f">91</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdda1">89</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe8bf">67</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe9c1">67</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe9c1">67</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe9c1">67</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe9c1">67</span>
 </td>
 </tr>
 <tr>
@@ -2021,22 +2405,31 @@ SC
 SD
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffefd1">52</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffefd1">52</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffefd1">52</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffefd3">50</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffeecf">54</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffefd3">53</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffefd4">52</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d5">51</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff0d6">50</span>
 </td>
 </tr>
 <tr>
@@ -2044,22 +2437,31 @@ SD
 TN
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffcc6e">129</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffcd71">127</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffcd72">126</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffcf77">122</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd588">111</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd994">103</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffda96">101</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdb99">99</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffdb9a">98</span>
 </td>
 </tr>
 <tr>
@@ -2067,22 +2469,31 @@ TN
 TX
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffaf3">26</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffaf3">26</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffaf3">26</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffaf3">25</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffdfb">19</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fffefd">19</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">18</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">18</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">18</span>
 </td>
 </tr>
 <tr>
@@ -2090,22 +2501,31 @@ TX
 UT
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff2dc">44</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff2dc">44</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff2dc">44</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff3dd">42</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff1d8">47</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff2db">46</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff3dd">45</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff3de">44</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffecca">60</span>
 </td>
 </tr>
 <tr>
@@ -2113,22 +2533,31 @@ UT
 VA
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff9ef">29</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff8ec">31</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff8ec">31</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff8ed">30</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffefd2">52</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff3dd">45</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff5e4">39</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff6e5">38</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff6e5">38</span>
 </td>
 </tr>
 <tr>
@@ -2136,22 +2565,31 @@ VA
 VT
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaf1e">191</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaf1e">191</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaf1e">191</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffaf1e">191</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -2159,22 +2597,31 @@ VT
 WA
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe5b5">74</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe5b5">74</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe5b6">73</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe6b8">71</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -2182,22 +2629,31 @@ WA
 WI
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffab13">200</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffab13">200</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffab13">200</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">200</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffab13">200</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffda96">100</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffda97">100</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffda97">100</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffda97">100</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffda97">100</span>
 </td>
 </tr>
 <tr>
@@ -2205,22 +2661,31 @@ WI
 WV
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff7ea">33</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff7ea">33</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff8eb">32</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #fff8eb">31</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc967">138</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd27f">100</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc968">138</span>
 </td>
 </tr>
 <tr>
@@ -2228,33 +2693,42 @@ WV
 WY
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffefd1">52</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffefd1">52</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffefd3">51</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffefd3">50</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffecc9">59</span>
 </td>
 <td style="text-align:right;">
-<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedcc">58</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffedce">57</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffeecf">56</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffeed0">55</span>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="income-cutoffs-for-childless-adults-in-20112015" class="section level2">
+<div id="income-cutoffs-for-childless-adults-in-20112018" class="section level2">
 <h2 class="hasAnchor">
-<a href="#income-cutoffs-for-childless-adults-in-20112015" class="anchor"></a>Income Cutoffs for Childless Adults in 2011–2015</h2>
+<a href="#income-cutoffs-for-childless-adults-in-20112018" class="anchor"></a>Income Cutoffs for Childless Adults in 2011–2018</h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">melig<span class="op">::</span>childless_adults <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb6-2" data-line-number="2"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/integer">as.integer</a></span>(year)) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/filter">filter</a></span>(year <span class="op">%in%</span><span class="st"> </span><span class="dv">2011</span><span class="op">:</span><span class="dv">2015</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/filter">filter</a></span>(year <span class="op">%in%</span><span class="st"> </span><span class="dv">2011</span><span class="op">:</span><span class="dv">2018</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb6-4" data-line-number="4"><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>month, <span class="op">-</span>state, <span class="op">-</span>fips) <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb6-5" data-line-number="5"><span class="st">  </span>tidyr<span class="op">::</span><span class="kw"><a href="https://tidyr.tidyverse.org/reference/spread.html">spread</a></span>(year, cutoff) <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb6-6" data-line-number="6"><span class="st">  </span><span class="kw">rename</span>(</a>
@@ -2262,17 +2736,23 @@ WY
 <a class="sourceLine" id="cb6-8" data-line-number="8">    <span class="dt">ca_2012 =</span> <span class="st">`</span><span class="dt">2012</span><span class="st">`</span>,</a>
 <a class="sourceLine" id="cb6-9" data-line-number="9">    <span class="dt">ca_2013 =</span> <span class="st">`</span><span class="dt">2013</span><span class="st">`</span>,</a>
 <a class="sourceLine" id="cb6-10" data-line-number="10">    <span class="dt">ca_2014 =</span> <span class="st">`</span><span class="dt">2014</span><span class="st">`</span>,</a>
-<a class="sourceLine" id="cb6-11" data-line-number="11">    <span class="dt">ca_2015 =</span> <span class="st">`</span><span class="dt">2015</span><span class="st">`</span></a>
-<a class="sourceLine" id="cb6-12" data-line-number="12">  ) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/formattable">formattable</a></span>(</a>
-<a class="sourceLine" id="cb6-14" data-line-number="14">    <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</a>
-<a class="sourceLine" id="cb6-15" data-line-number="15">      <span class="dt">ca_2011 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
-<a class="sourceLine" id="cb6-16" data-line-number="16">      <span class="dt">ca_2012 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
-<a class="sourceLine" id="cb6-17" data-line-number="17">      <span class="dt">ca_2013 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
-<a class="sourceLine" id="cb6-18" data-line-number="18">      <span class="dt">ca_2014 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
-<a class="sourceLine" id="cb6-19" data-line-number="19">      <span class="dt">ca_2015 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>)</a>
-<a class="sourceLine" id="cb6-20" data-line-number="20">    )</a>
-<a class="sourceLine" id="cb6-21" data-line-number="21">  ) </a></code></pre></div>
+<a class="sourceLine" id="cb6-11" data-line-number="11">    <span class="dt">ca_2015 =</span> <span class="st">`</span><span class="dt">2015</span><span class="st">`</span>,</a>
+<a class="sourceLine" id="cb6-12" data-line-number="12">    <span class="dt">ca_2016 =</span> <span class="st">`</span><span class="dt">2016</span><span class="st">`</span>,</a>
+<a class="sourceLine" id="cb6-13" data-line-number="13">    <span class="dt">ca_2017 =</span> <span class="st">`</span><span class="dt">2017</span><span class="st">`</span>,</a>
+<a class="sourceLine" id="cb6-14" data-line-number="14">    <span class="dt">ca_2018 =</span> <span class="st">`</span><span class="dt">2018</span><span class="st">`</span></a>
+<a class="sourceLine" id="cb6-15" data-line-number="15">  ) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb6-16" data-line-number="16"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/formattable">formattable</a></span>(</a>
+<a class="sourceLine" id="cb6-17" data-line-number="17">    <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</a>
+<a class="sourceLine" id="cb6-18" data-line-number="18">      <span class="dt">ca_2011 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb6-19" data-line-number="19">      <span class="dt">ca_2012 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb6-20" data-line-number="20">      <span class="dt">ca_2013 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb6-21" data-line-number="21">      <span class="dt">ca_2014 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb6-22" data-line-number="22">      <span class="dt">ca_2015 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb6-23" data-line-number="23">      <span class="dt">ca_2016 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb6-24" data-line-number="24">      <span class="dt">ca_2017 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>),</a>
+<a class="sourceLine" id="cb6-25" data-line-number="25">      <span class="dt">ca_2018 =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/formattable/topics/color_tile">color_tile</a></span>(<span class="st">"white"</span>, <span class="st">"orange"</span>)</a>
+<a class="sourceLine" id="cb6-26" data-line-number="26">    )</a>
+<a class="sourceLine" id="cb6-27" data-line-number="27">  ) </a></code></pre></div>
 <table class="table table table table-condensed">
 <thead><tr>
 <th style="text-align:right;">
@@ -2293,6 +2773,15 @@ ca_2014
 <th style="text-align:right;">
 ca_2015
 </th>
+<th style="text-align:right;">
+ca_2016
+</th>
+<th style="text-align:right;">
+ca_2017
+</th>
+<th style="text-align:right;">
+ca_2018
+</th>
 </tr></thead>
 <tbody>
 <tr>
@@ -2314,10 +2803,28 @@ AK
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
 AL
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
@@ -2347,6 +2854,15 @@ AR
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
@@ -2374,6 +2890,15 @@ AZ
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -2387,6 +2912,15 @@ CA
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
@@ -2414,6 +2948,15 @@ CO
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -2427,6 +2970,15 @@ CT
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffe1aa">70</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
@@ -2454,6 +3006,15 @@ DC
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">215</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">215</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">215</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffa500">215</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -2474,10 +3035,28 @@ DE
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
 FL
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
@@ -2514,6 +3093,15 @@ GA
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -2527,6 +3115,15 @@ HI
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd486">100</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
@@ -2554,10 +3151,28 @@ IA
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
 ID
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
@@ -2594,6 +3209,15 @@ IL
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -2614,10 +3238,28 @@ IN
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">139</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">139</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc45a">139</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
 KS
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
@@ -2654,6 +3296,15 @@ KY
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -2674,6 +3325,15 @@ LA
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -2687,6 +3347,15 @@ MA
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
@@ -2714,10 +3383,28 @@ MD
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
 ME
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
@@ -2754,6 +3441,15 @@ MI
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -2774,10 +3470,28 @@ MN
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
 MO
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
@@ -2814,6 +3528,15 @@ MS
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -2834,10 +3557,28 @@ MT
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
 NC
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
@@ -2874,10 +3615,28 @@ ND
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
 NE
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
@@ -2914,6 +3673,15 @@ NH
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -2927,6 +3695,15 @@ NJ
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
@@ -2954,6 +3731,15 @@ NM
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -2967,6 +3753,15 @@ NV
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
@@ -2994,6 +3789,15 @@ NY
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -3014,10 +3818,28 @@ OH
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
 OK
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
@@ -3054,6 +3876,15 @@ OR
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -3070,6 +3901,15 @@ PA
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
@@ -3094,10 +3934,28 @@ RI
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
 SC
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
@@ -3134,10 +3992,28 @@ SD
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
 TN
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
@@ -3174,6 +4050,15 @@ TX
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -3194,10 +4079,28 @@ UT
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
 VA
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
@@ -3234,6 +4137,15 @@ VT
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -3247,6 +4159,15 @@ WA
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
@@ -3274,6 +4195,15 @@ WI
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd588">100</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd588">100</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd588">100</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffd588">100</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
@@ -3294,10 +4224,28 @@ WV
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
 </td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffc55b">138</span>
+</td>
 </tr>
 <tr>
 <td style="text-align:right;">
 WY
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
+</td>
+<td style="text-align:right;">
+<span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
 </td>
 <td style="text-align:right;">
 <span style="display: block; padding: 0 4px; border-radius: 4px; background-color: #ffffff">0</span>
@@ -3329,38 +4277,38 @@ WY
 <p>Because the age information for the CHIP programs (<code>type == CHIP</code>) is not available from the source data, I assign a value of “0-18” to the corresponding <code>age</code> variable, though some states’ CHIP programs don’t cover all children under age 19 in some years.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="co"># the data</span></a>
 <a class="sourceLine" id="cb7-2" data-line-number="2">melig<span class="op">::</span>children</a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="co">#&gt; # A tibble: 3,060 x 8</span></a>
-<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="co">#&gt;    state    fips usps  type     agegrp month   year  cutoff</span></a>
-<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="co">#&gt;    &lt;chr&gt;   &lt;int&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;  &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="co">#&gt;  1 Alabama     1 AL    Medicaid 0-1    October 2000     133</span></a>
-<a class="sourceLine" id="cb7-7" data-line-number="7"><span class="co">#&gt;  2 Alabama     1 AL    Medicaid 1-5    October 2000     133</span></a>
-<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="co">#&gt;  3 Alabama     1 AL    Medicaid 6-18   October 2000     100</span></a>
-<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co">#&gt;  4 Alabama     1 AL    CHIP     0-18   October 2000     200</span></a>
-<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="co">#&gt;  5 Alabama     1 AL    Medicaid 0-1    January 2002     133</span></a>
-<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="co">#&gt;  6 Alabama     1 AL    Medicaid 1-5    January 2002     133</span></a>
-<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#&gt;  7 Alabama     1 AL    Medicaid 6-18   January 2002     100</span></a>
-<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="co">#&gt;  8 Alabama     1 AL    CHIP     0-18   January 2002     200</span></a>
-<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="co">#&gt;  9 Alabama     1 AL    Medicaid 0-1    April   2003     133</span></a>
-<a class="sourceLine" id="cb7-15" data-line-number="15"><span class="co">#&gt; 10 Alabama     1 AL    Medicaid 1-5    April   2003     133</span></a>
-<a class="sourceLine" id="cb7-16" data-line-number="16"><span class="co">#&gt; # … with 3,050 more rows</span></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="co">#&gt; # A tibble: 4,335 x 8</span></a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="co">#&gt;    state   fips  usps  type             agegrp month   year  cutoff</span></a>
+<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="co">#&gt;    &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="co">#&gt;  1 Alabama 01    AL    Medicaid         0-1    October 2000     133</span></a>
+<a class="sourceLine" id="cb7-7" data-line-number="7"><span class="co">#&gt;  2 Alabama 01    AL    Medicaid         1-5    October 2000     133</span></a>
+<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="co">#&gt;  3 Alabama 01    AL    Medicaid         6-18   October 2000     100</span></a>
+<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="co">#&gt;  4 Alabama 01    AL    CHIP             0-18   October 2000     200</span></a>
+<a class="sourceLine" id="cb7-10" data-line-number="10"><span class="co">#&gt;  5 Alabama 01    AL    CHIP/Mcaid Upper 0-18   October 2000     200</span></a>
+<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="co">#&gt;  6 Alabama 01    AL    Medicaid         0-1    January 2002     133</span></a>
+<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="co">#&gt;  7 Alabama 01    AL    Medicaid         1-5    January 2002     133</span></a>
+<a class="sourceLine" id="cb7-13" data-line-number="13"><span class="co">#&gt;  8 Alabama 01    AL    Medicaid         6-18   January 2002     100</span></a>
+<a class="sourceLine" id="cb7-14" data-line-number="14"><span class="co">#&gt;  9 Alabama 01    AL    CHIP             0-18   January 2002     200</span></a>
+<a class="sourceLine" id="cb7-15" data-line-number="15"><span class="co">#&gt; 10 Alabama 01    AL    CHIP/Mcaid Upper 0-18   January 2002     200</span></a>
+<a class="sourceLine" id="cb7-16" data-line-number="16"><span class="co">#&gt; # … with 4,325 more rows</span></a>
 <a class="sourceLine" id="cb7-17" data-line-number="17"></a>
 <a class="sourceLine" id="cb7-18" data-line-number="18"><span class="co"># IL</span></a>
 <a class="sourceLine" id="cb7-19" data-line-number="19">melig<span class="op">::</span>children <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb7-20" data-line-number="20"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/stats/topics/filter">filter</a></span>(usps <span class="op">==</span><span class="st"> "IL"</span>) </a>
-<a class="sourceLine" id="cb7-21" data-line-number="21"><span class="co">#&gt; # A tibble: 60 x 8</span></a>
-<a class="sourceLine" id="cb7-22" data-line-number="22"><span class="co">#&gt;    state     fips usps  type     agegrp month   year  cutoff</span></a>
-<a class="sourceLine" id="cb7-23" data-line-number="23"><span class="co">#&gt;    &lt;chr&gt;    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;  &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb7-24" data-line-number="24"><span class="co">#&gt;  1 Illinois    17 IL    Medicaid 0-1    October 2000     200</span></a>
-<a class="sourceLine" id="cb7-25" data-line-number="25"><span class="co">#&gt;  2 Illinois    17 IL    Medicaid 1-5    October 2000     133</span></a>
-<a class="sourceLine" id="cb7-26" data-line-number="26"><span class="co">#&gt;  3 Illinois    17 IL    Medicaid 6-18   October 2000     133</span></a>
-<a class="sourceLine" id="cb7-27" data-line-number="27"><span class="co">#&gt;  4 Illinois    17 IL    CHIP     0-18   October 2000     185</span></a>
-<a class="sourceLine" id="cb7-28" data-line-number="28"><span class="co">#&gt;  5 Illinois    17 IL    Medicaid 0-1    January 2002     200</span></a>
-<a class="sourceLine" id="cb7-29" data-line-number="29"><span class="co">#&gt;  6 Illinois    17 IL    Medicaid 1-5    January 2002     133</span></a>
-<a class="sourceLine" id="cb7-30" data-line-number="30"><span class="co">#&gt;  7 Illinois    17 IL    Medicaid 6-18   January 2002     133</span></a>
-<a class="sourceLine" id="cb7-31" data-line-number="31"><span class="co">#&gt;  8 Illinois    17 IL    CHIP     0-18   January 2002     185</span></a>
-<a class="sourceLine" id="cb7-32" data-line-number="32"><span class="co">#&gt;  9 Illinois    17 IL    Medicaid 0-1    April   2003     200</span></a>
-<a class="sourceLine" id="cb7-33" data-line-number="33"><span class="co">#&gt; 10 Illinois    17 IL    Medicaid 1-5    April   2003     133</span></a>
-<a class="sourceLine" id="cb7-34" data-line-number="34"><span class="co">#&gt; # … with 50 more rows</span></a></code></pre></div>
+<a class="sourceLine" id="cb7-21" data-line-number="21"><span class="co">#&gt; # A tibble: 85 x 8</span></a>
+<a class="sourceLine" id="cb7-22" data-line-number="22"><span class="co">#&gt;    state    fips  usps  type             agegrp month   year  cutoff</span></a>
+<a class="sourceLine" id="cb7-23" data-line-number="23"><span class="co">#&gt;    &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb7-24" data-line-number="24"><span class="co">#&gt;  1 Illinois 17    IL    Medicaid         0-1    October 2000     200</span></a>
+<a class="sourceLine" id="cb7-25" data-line-number="25"><span class="co">#&gt;  2 Illinois 17    IL    Medicaid         1-5    October 2000     133</span></a>
+<a class="sourceLine" id="cb7-26" data-line-number="26"><span class="co">#&gt;  3 Illinois 17    IL    Medicaid         6-18   October 2000     133</span></a>
+<a class="sourceLine" id="cb7-27" data-line-number="27"><span class="co">#&gt;  4 Illinois 17    IL    CHIP             0-18   October 2000     185</span></a>
+<a class="sourceLine" id="cb7-28" data-line-number="28"><span class="co">#&gt;  5 Illinois 17    IL    CHIP/Mcaid Upper 0-18   October 2000     200</span></a>
+<a class="sourceLine" id="cb7-29" data-line-number="29"><span class="co">#&gt;  6 Illinois 17    IL    Medicaid         0-1    January 2002     200</span></a>
+<a class="sourceLine" id="cb7-30" data-line-number="30"><span class="co">#&gt;  7 Illinois 17    IL    Medicaid         1-5    January 2002     133</span></a>
+<a class="sourceLine" id="cb7-31" data-line-number="31"><span class="co">#&gt;  8 Illinois 17    IL    Medicaid         6-18   January 2002     133</span></a>
+<a class="sourceLine" id="cb7-32" data-line-number="32"><span class="co">#&gt;  9 Illinois 17    IL    CHIP             0-18   January 2002     185</span></a>
+<a class="sourceLine" id="cb7-33" data-line-number="33"><span class="co">#&gt; 10 Illinois 17    IL    CHIP/Mcaid Upper 0-18   January 2002     200</span></a>
+<a class="sourceLine" id="cb7-34" data-line-number="34"><span class="co">#&gt; # … with 75 more rows</span></a></code></pre></div>
 </div>
 <div id="save-as-other-data-formats" class="section level2">
 <h2 class="hasAnchor">

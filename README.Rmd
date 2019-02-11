@@ -98,7 +98,7 @@ melig::childless_adults %>%
   formattable(list(ca_cutoff = normalize_bar("lightgreen", 0.2))) 
 ```
 
-## Income Cutoffs for Parents in 2010--2015
+## Income Cutoffs for Parents in 2010--2018
 
 ```{r pa_cutoffs}
 melig::parents %>% 
@@ -106,7 +106,7 @@ melig::parents %>%
     year = if_else(year == "2009" & month == "December", "2010", year),
     year = year %>% as.integer()
   ) %>% 
-  filter(year %in% 2010:2015) %>% 
+  filter(year %in% 2010:2018) %>% 
   select(-month, -state, -fips) %>% 
   tidyr::spread(year, cutoff) %>% 
   rename(
@@ -115,7 +115,10 @@ melig::parents %>%
     pa_2012 = `2012`,
     pa_2013 = `2013`,
     pa_2014 = `2014`,
-    pa_2015 = `2015`
+    pa_2015 = `2015`,
+    pa_2016 = `2016`,
+    pa_2017 = `2017`,
+    pa_2018 = `2018`
   ) %>% 
   formattable(
     list(
@@ -124,17 +127,20 @@ melig::parents %>%
      pa_2012 = color_tile("white", "orange"),
      pa_2013 = color_tile("white", "orange"),
      pa_2014 = color_tile("white", "orange"),
-     pa_2015 = color_tile("white", "orange")
+     pa_2015 = color_tile("white", "orange"),
+     pa_2016 = color_tile("white", "orange"),
+     pa_2017 = color_tile("white", "orange"),
+     pa_2018 = color_tile("white", "orange")
     )
   ) 
 ```
 
-## Income Cutoffs for Childless Adults in 2011--2015
+## Income Cutoffs for Childless Adults in 2011--2018
 
 ```{r ca_cutoffs}
 melig::childless_adults %>% 
   mutate(year = as.integer(year)) %>% 
-  filter(year %in% 2011:2015) %>% 
+  filter(year %in% 2011:2018) %>% 
   select(-month, -state, -fips) %>% 
   tidyr::spread(year, cutoff) %>% 
   rename(
@@ -142,7 +148,10 @@ melig::childless_adults %>%
     ca_2012 = `2012`,
     ca_2013 = `2013`,
     ca_2014 = `2014`,
-    ca_2015 = `2015`
+    ca_2015 = `2015`,
+    ca_2016 = `2016`,
+    ca_2017 = `2017`,
+    ca_2018 = `2018`
   ) %>% 
   formattable(
     list(
@@ -150,7 +159,10 @@ melig::childless_adults %>%
       ca_2012 = color_tile("white", "orange"),
       ca_2013 = color_tile("white", "orange"),
       ca_2014 = color_tile("white", "orange"),
-      ca_2015 = color_tile("white", "orange")
+      ca_2015 = color_tile("white", "orange"),
+      ca_2016 = color_tile("white", "orange"),
+      ca_2017 = color_tile("white", "orange"),
+      ca_2018 = color_tile("white", "orange")
     )
   ) 
 ```
