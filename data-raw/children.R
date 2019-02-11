@@ -33,19 +33,20 @@ read_csv("data-raw/children_age_1_5_medicaid.csv", skip = 2) %>%
   select(state, fips, usps, type, agegrp, everything()) %>%
   print() -> children1_5
 
-children6_18 = readr::read_csv("data-raw/children_age_6_18_medicaid.csv", skip = 3)
-children6_18 = children6_18 %>%
+read_csv("data-raw/children_age_6_18_medicaid.csv", skip = 2) %>%
+  select(-Footnotes) %>%
   filter(Location != "United States") %>%
   rename(state = Location) %>%
-  left_join(fips::fips, by = "state") %>%
+  inner_join(fips::fips, by = "state") %>%
   select(state, fips, usps, everything()) %>%
   tidyr::gather(year, cutoff, -state:-usps) %>%
   tidyr::separate(year, c("month", "year")) %>%
-  mutate(cutoff = as.integer(cutoff),
-         type = "Medicaid",
-         agegrp = "6-18") %>%
-  select(state, fips, usps, type, agegrp, everything())
-children6_18
+  mutate(type = "Medicaid", agegrp = "6-18") %>%
+  mutate(cutoff = as.integer(cutoff) * 100) %>% # filter(is.na(cutoff))
+  # TN 2000 and 2002 have not upper limits
+  mutate(cutoff = if_else(usps == "TN" & year %in% c(2000, 2002), 9999, cutoff)) %>%
+  select(state, fips, usps, type, agegrp, everything()) %>%
+  print() -> children6_18
 
 chip0_18 = readr::read_csv("data-raw/children_age_0_18_chip.csv", skip = 3)
 chip0_18 = chip0_18 %>%
