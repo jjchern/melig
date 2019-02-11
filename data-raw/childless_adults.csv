@@ -1,56 +1,75 @@
-"Title: Medicaid Income Eligibility Limits for Other Non-Disabled Adults, 2011-2016",,,,,,,
-"Timeframe: Jan 2011-Jan 2016",,,,,,,
-"Notes: See http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/ for notes and sources.",,,,,,,
-Location,"January 2011","January 2012","January 2013","January 2014","January 2015","January 2016"
-"United States",0,0,0,138,138,138
-Alabama,0,0,0,0,0,0
-Alaska,0,0,0,0,0,138
-Arizona,110,110,100,138,138,138
-Arkansas,0,0,0,138,138,138
-California,0,0,0,138,138,138
-Colorado,0,0,20,138,138,138
-Connecticut,73,72,70,138,138,138
-Delaware,110,110,110,138,138,138
-"District of Columbia",211,211,211,215,215,215
-Florida,0,0,0,0,0,0
-Georgia,0,0,0,0,0,0
-Hawaii,100,100,100,138,138,138
-Idaho,0,0,0,0,0,0
-Illinois,0,0,0,138,138,138
-Indiana,0,0,0,0,0,138
-Iowa,0,0,0,138,138,138
-Kansas,0,0,0,0,0,0
-Kentucky,0,0,0,138,138,138
-Louisiana,0,0,0,0,0,0
-Maine,0,0,0,0,0,0
-Maryland,0,0,0,138,138,138
-Massachusetts,0,0,0,138,138,138
-Michigan,0,0,0,138,138,138
-Minnesota,0,75,75,205,138,138
-Mississippi,0,0,0,0,0,0
-Missouri,0,0,0,0,0,0
-Montana,0,0,0,0,0,138
-Nebraska,0,0,0,0,0,0
-Nevada,0,0,0,138,138,138
-"New Hampshire",0,0,0,0,138,138
-"New Jersey",0,0,0,138,138,138
-"New Mexico",0,0,0,138,138,138
-"New York",100,100,100,138,138,138
-"North Carolina",0,0,0,0,0,0
-"North Dakota",0,0,0,138,138,138
-Ohio,0,0,0,138,138,138
-Oklahoma,0,0,0,0,0,0
-Oregon,0,0,0,138,138,138
-Pennsylvania,0,0,0,0,138,138
-"Rhode Island",0,0,0,138,138,138
-"South Carolina",0,0,0,0,0,0
-"South Dakota",0,0,0,0,0,0
-Tennessee,0,0,0,0,0,0
-Texas,0,0,0,0,0,0
-Utah,0,0,0,0,0,0
-Vermont,160,150,160,138,138,138
-Virginia,0,0,0,0,0,0
-Washington,0,0,0,138,138,138
-"West Virginia",0,0,0,138,138,138
-Wisconsin,0,0,0,100,100,100
-Wyoming,0,0,0,0,0,0
+"Title: Medicaid Income Eligibility Limits for Other Non-Disabled Adults, 2011-2018 | The Henry J. Kaiser Family Foundation"
+"Timeframe: Jan 2011-Jan 2018"
+"Location","January 2011","January 2012","January 2013","January 2014","January 2015","January 2016","January 2017","January 2018",Footnotes
+"United States","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38","1"
+"Alabama","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Alaska","0.00","0.00","0.00","0.00","0.00","1.38","1.38","1.38"
+"Arizona","1.10","1.10","1.00","1.38","1.38","1.38","1.38","1.38"
+"Arkansas","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"California","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"Colorado","0.00","0.00","0.20","1.38","1.38","1.38","1.38","1.38"
+"Connecticut","0.73","0.72","0.70","1.38","1.38","1.38","1.38","1.38"
+"Delaware","1.10","1.10","1.10","1.38","1.38","1.38","1.38","1.38"
+"District of Columbia","2.11","2.11","2.11","2.15","2.15","2.15","2.15","2.15"
+"Florida","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Georgia","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Hawaii","1.00","1.00","1.00","1.38","1.38","1.38","1.38","1.38"
+"Idaho","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Illinois","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"Indiana","0.00","0.00","0.00","0.00","0.00","1.39","1.39","1.39"
+"Iowa","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"Kansas","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Kentucky","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"Louisiana","0.00","0.00","0.00","0.00","0.00","0.00","1.38","1.38"
+"Maine","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Maryland","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"Massachusetts","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"Michigan","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"Minnesota","0.00","0.75","0.75","2.00","1.38","1.38","1.38","1.38"
+"Mississippi","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Missouri","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Montana","0.00","0.00","0.00","0.00","0.00","1.38","1.38","1.38"
+"Nebraska","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Nevada","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"New Hampshire","0.00","0.00","0.00","0.00","1.38","1.38","1.38","1.38"
+"New Jersey","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"New Mexico","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"New York","1.00","1.00","1.00","1.38","1.38","1.38","1.38","1.38"
+"North Carolina","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"North Dakota","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"Ohio","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"Oklahoma","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Oregon","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"Pennsylvania","0.00","0.00","0.00","0.00","1.38","1.38","1.38","1.38"
+"Rhode Island","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"South Carolina","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"South Dakota","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Tennessee","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Texas","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Utah","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Vermont","1.60","1.50","1.60","1.38","1.38","1.38","1.38","1.38"
+"Virginia","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+"Washington","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"West Virginia","0.00","0.00","0.00","1.38","1.38","1.38","1.38","1.38"
+"Wisconsin","0.00","0.00","0.00","1.00","1.00","1.00","1.00","1.00"
+"Wyoming","0.00","0.00","0.00","0.00","0.00","0.00","0.00","0.00"
+
+"Notes"
+"All eligibility limits calculated as a percent of the Federal Poverty Level (FPL)."
+""
+"Reflects income eligibility limits for coverage that provides full Medicaid benefits. Eligibility limits for waiver programs that provide more limited benefits or for fully state-funded programs are not included."
+""
+"Changes over time reflect policy changes and, in some cases, changes in state reporting. Changes between January 2013 and 2014 reflect the ACA Medicaid expansion in some states and the conversion to MAGI-based income eligibility standards. Some changes between January 2014 and January 2015 reflect continued adjustments to these MAGI conversions."
+""
+"Beginning in 2014, income limits include a disregard equal to five percentage points of the FPL."
+""
+"Does not include information regarding periods of time new enrollment may have been closed under a waiver program."
+""
+"See annual survey reports for state-specific notes. For the most recent data on eligibility limits for adults, please visit: [http://kff.org/health-reform/state-indicator/medicaid-income-eligibility-limits-for-adults-as-a-percent-of-the-federal-poverty-level/](http://kff.org/health-reform/state-indicator/medicaid-income-eligibility-limits-for-adults-as-a-percent-of-the-federal-poverty-level/)."
+
+"Sources"
+"Based on a national survey conducted by the Kaiser Commission on Medicaid and the Uninsured with the Georgetown University Center for Children and Families, 2011-2018. Available at: [http://kff.org/medicaid/report/annual-updates-on-eligibility-rules-enrollment-and/](http://kff.org/medicaid/report/annual-updates-on-eligibility-rules-enrollment-and/)."
+
+
+Footnotes
+"1. Median value for the United States"

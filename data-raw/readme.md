@@ -9,7 +9,7 @@
 
 - `parents.csv`: [Medicaid Income Eligibility Limits for Parents](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents/)
 
-- `childless_adults.csv`:  [Medicaid Income Eligibility Limits for Other Non-Disabled Adults](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/)
+- `childless_adults.csv`:  [Medicaid Income Eligibility Limits for Other Non-Disabled Adults](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/)
 
 # R Scripts
 

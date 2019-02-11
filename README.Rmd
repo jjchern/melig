@@ -40,9 +40,9 @@ The R package `melig` contains information on **M**edicaid income **elig**ibilit
     
 - `prenant_wom.rda`: [Medicaid and CHIP Income Eligibility Limits for Pregnant Women, 2003-2016](http://kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women/)
 - `parents.rda`: [Medicaid Income Eligibility Limits for Parents, 2002-2016](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents/)
-- `childless_adults.rda`:  [Medicaid Income Eligibility Limits for Other Non-Disabled Adults, 2011-2016](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/)
+- `childless_adults.rda`:  [Medicaid Income Eligibility Limits for Other Non-Disabled Adults, 2011-2018](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/)
 
-The datasets have been [tidied](http://vita.had.co.nz/papers/tidy-data.pdf).
+The datasets are stored in tidy format (long table).
 
 The [`/data-raw/`](https://github.com/jjchern/melig/tree/master/data-raw) folder contains raw data and R scripts.
 
