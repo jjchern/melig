@@ -7,7 +7,7 @@
 
 - `pregnant_women.csv`: [Medicaid and CHIP Income Eligibility Limits for Pregnant Women](http://kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women/)
 
-- `parents.csv`: [Medicaid Income Eligibility Limits for Parents](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents/)
+- `parents.csv`: [Medicaid Income Eligibility Limits for Parents](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents/)
 
 - `childless_adults.csv`:  [Medicaid Income Eligibility Limits for Other Non-Disabled Adults](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/)
 
