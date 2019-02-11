@@ -8,7 +8,8 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "README-"
+  fig.path = "man/figures/README-",
+  out.width = "100%"
 )
 
 # Source: https://stackoverflow.com/questions/34983822/how-to-have-r-formattable-rendered-to-pdf-output-and-how-to-have-percents-in-the
@@ -54,8 +55,10 @@ The [`/data-raw/`](https://github.com/jjchern/melig/tree/master/data-raw) folder
 # Installing the Package
 
 ```R
-# install.packages("devtools")
-devtools::install_github("jjchern/melig")
+# install.packages("remotes")
+remotes::install_github("jjchern/melig")
+# To uninstall the package, use:
+# remove.packages("melig")
 ```
 
 # Usage
@@ -63,7 +66,7 @@ devtools::install_github("jjchern/melig")
 ## Long and Wide Formats
 
 ```{r, message=FALSE, warning=FALSE}
-library(dplyr, warn.conflicts = FALSE)
+library(tidyverse)
 library(formattable)
 
 # the datasets have been tidied
@@ -71,8 +74,8 @@ melig::parents
 
 # but you can covert it back to the original wide format
 melig::parents %>% 
-  tidyr::unite_("monyear", c("month", "year"), sep = " ") %>% 
-  tidyr::spread(monyear, cutoff)
+  unite_("monyear", c("month", "year"), sep = " ") %>% 
+  spread(monyear, cutoff)
 ```
 
 ## States that Have Income Cutoffs Greater Than 100 Federal Poverty Guidelines in 2014
@@ -83,18 +86,14 @@ melig::parents %>%
   filter(year == 2014) %>% 
   filter(cutoff >= 100) %>% 
   select(state, fips, usps, pa_cutoff = cutoff) %>% 
-  formattable(
-    list(pa_cutoff = normalize_bar("lightgreen", 0.2))
-  )
+  formattable(list(pa_cutoff = normalize_bar("lightgreen", 0.2)))
 
 # for childless adults
 melig::childless_adults %>% 
   filter(year == 2014) %>% 
   filter(cutoff >= 100) %>% 
   select(state, fips, usps, ca_cutoff = cutoff) %>% 
-  formattable(
-    list(ca_cutoff = normalize_bar("lightgreen", 0.2))
-  ) 
+  formattable(list(ca_cutoff = normalize_bar("lightgreen", 0.2))) 
 ```
 
 ## Income Cutoffs for Parents in 2010--2015
@@ -178,11 +177,11 @@ melig::children %>%
 
 ```r
 # save as Stata format
-haven::write_dta(melig::parents, "pa0216.dta")
+haven::write_dta(melig::parents, "pa0218.dta")
 
 # or
-rio::export(melig::parents, "pa0216.dta")
+rio::export(melig::parents, "pa0218.dta")
 ```
 
-Or download the `*.rda` file and try the [rioweb](https://lbraglia.shinyapps.io/rioweb) made by [@lbraglia](https://github.com/lbraglia).
+Or download the `*.rda` file and try the [rioweb](https://lbraglia.shinyapps.io/rioweb) made by @[lbraglia](https://github.com/lbraglia).
 
