@@ -1,6 +1,6 @@
 # Data Sources
 
-- `infants_age_0_1_medicaid.csv`: [Medicaid Income Eligibility Limits for Infants Ages 0 – 1](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-infants-ages-0-1/)
+- `infants_age_0_1_medicaid.csv`: [Medicaid Income Eligibility Limits for Infants Ages 0 – 1](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-infants-ages-0-1/)
 - `children_age_1_5_medicaid.csv`: [Medicaid Income Eligibility Limits for Children Ages 1 – 5](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-children-ages-1-5/)
 - `children_age_6_18_medicaid.csv`: [Medicaid Income Eligibility Limits for Children Ages 6-18](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-children-ages-6-18/)
 - `children_age_0_18_chip.csv`: [Separate Children’s Health Insurance Program (CHIP) Income Eligibility Limits for Children](http://kff.org/medicaid/state-indicator/separate-childrens-health-insurance-program-chip-income-eligibility-limits-for-children/)
