@@ -3,16 +3,15 @@
 \docType{data}
 \name{childless_adults}
 \alias{childless_adults}
-\title{Medicaid Income Eligibility Limits for Childless Adults, 2011-2016}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 306 rows and 6 columns.}
+\title{Medicaid Income Eligibility Limits for Childless Adults, 2011-2018}
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 408 rows and 6 columns.}
 \source{
-/url{http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults-2011-2015/}
+\href{https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/}{Medicaid Income Eligibility Limits for Other Non-Disabled Adults, 2011-2018}
 }
 \usage{
 childless_adults
 }
 \description{
-Medicaid Income Eligibility Limits for Childless Adults, 2011-2016
+Medicaid Income Eligibility Limits for Childless Adults, 2011-2018
 }
 \keyword{datasets}
-

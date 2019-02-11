@@ -32,7 +32,6 @@ export_formattable <- function(f, file, width = "100%", height = NULL,
 The R package `melig` contains information on **M**edicaid income **elig**ibility limits, collected by [the Kaiser Family Foundation](http://kff.org/data-collection/trends-in-medicaid-income-eligibility-limits/). It includes the following datasets:
 
 - `children.rda`: 
-    - [Medicaid and CHIP Income Eligibility Limits for Children, 2000-2016](http://kff.org/medicaid/state-indicator/medicaidchip-upper-income-eligibility-limits-for-children/)
     - [Medicaid Income Eligibility Limits for Infants Ages 0 – 1, 2000-2018](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-infants-ages-0-1/)
     - [Medicaid Income Eligibility Limits for Children Ages 1 – 5, 2000-2018](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-children-ages-1-5/)
     - [Medicaid Income Eligibility Limits for Children Ages 6-18, 2000-2018](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-children-ages-6-18/)

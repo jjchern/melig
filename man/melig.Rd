@@ -8,4 +8,3 @@
 \description{
 melig: Trends in Medicaid Income Eligibility Limits
 }
-
