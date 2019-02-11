@@ -26,9 +26,11 @@ export_formattable <- function(f, file, width = "100%", height = NULL,
 }
 ```
 
-[![Travis-CI Build Status](https://travis-ci.org/jjchern/melig.svg?branch=master)](https://travis-ci.org/jjchern/melig)
-
 # About `melig`
+
+[![Travis-CI Build Status](https://travis-ci.org/jjchern/melig.svg?branch=master)](https://travis-ci.org/jjchern/melig)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/jjchern/melig?branch=master&svg=true)](https://ci.appveyor.com/project/jjchern/melig)
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)]()
 
 The R package `melig` contains information on **M**edicaid income **elig**ibility limits, collected by [the Kaiser Family Foundation](http://kff.org/data-collection/trends-in-medicaid-income-eligibility-limits/). It includes the following datasets:
 
@@ -124,8 +126,7 @@ melig::parents %>%
      pa_2014 = color_tile("white", "orange"),
      pa_2015 = color_tile("white", "orange")
     )
-  ) %>% 
-  export_formattable("pa_cutoffs.png")
+  ) 
 ```
 
 ## Income Cutoffs for Childless Adults in 2011--2015
@@ -151,8 +152,7 @@ melig::childless_adults %>%
       ca_2014 = color_tile("white", "orange"),
       ca_2015 = color_tile("white", "orange")
     )
-  ) %>% 
-  export_formattable("ca_cutoffs.png") 
+  ) 
 ```
 
 ## Income Cutoffs for Children
