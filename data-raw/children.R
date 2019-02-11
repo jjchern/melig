@@ -18,19 +18,20 @@ read_csv("data-raw/infants_age_0_1_medicaid.csv", skip = 2) %>%
   select(state, fips, usps, type, agegrp, everything()) %>%
   print() -> infant0_1
 
-children1_5 = readr::read_csv("data-raw/children_age_1_5_medicaid.csv", skip = 3)
-children1_5 = children1_5 %>%
+read_csv("data-raw/children_age_1_5_medicaid.csv", skip = 2) %>%
+  select(-Footnotes) %>%
   filter(Location != "United States") %>%
   rename(state = Location) %>%
-  left_join(fips::fips, by = "state") %>%
+  inner_join(fips::fips, by = "state") %>%
   select(state, fips, usps, everything()) %>%
-  tidyr::gather(year, cutoff, -state:-usps) %>%
-  tidyr::separate(year, c("month", "year")) %>%
-  mutate(cutoff = as.integer(cutoff),
-         type = "Medicaid",
-         agegrp = "1-5") %>%
-  select(state, fips, usps, type, agegrp, everything())
-children1_5
+  gather(year, cutoff, -state:-usps) %>%
+  separate(year, c("month", "year")) %>%
+  mutate(type = "Medicaid", agegrp = "1-5") %>%
+  mutate(cutoff = as.integer(cutoff) * 100) %>% # filter(is.na(cutoff))
+  # TN 2000 and 2002 have not upper limits
+  mutate(cutoff = if_else(usps == "TN" & year %in% c(2000, 2002), 9999, cutoff)) %>%
+  select(state, fips, usps, type, agegrp, everything()) %>%
+  print() -> children1_5
 
 children6_18 = readr::read_csv("data-raw/children_age_6_18_medicaid.csv", skip = 3)
 children6_18 = children6_18 %>%
