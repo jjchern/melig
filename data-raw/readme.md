@@ -5,7 +5,7 @@
 - `children_age_6_18_medicaid.csv`: [Medicaid Income Eligibility Limits for Children Ages 6-18](http://kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-children-ages-6-18/)
 - `children_age_0_18_chip.csv`: [Separate Children’s Health Insurance Program (CHIP) Income Eligibility Limits for Children](http://kff.org/medicaid/state-indicator/separate-childrens-health-insurance-program-chip-income-eligibility-limits-for-children/)
 
-- `pregnant_women.csv`: [Medicaid and CHIP Income Eligibility Limits for Pregnant Women](http://kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women/)
+- `pregnant_women.csv`: [Medicaid and CHIP Income Eligibility Limits for Pregnant Women](https://www.kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women/)
 
 - `parents.csv`: [Medicaid Income Eligibility Limits for Parents](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents/)
 

@@ -1,17 +1,17 @@
 
 # Medicaid and CHIP income cutoff for prenant women ------------------------
 
-library(dplyr)
+library(tidyverse)
 
-pregnant_women = readr::read_csv("data-raw/pregnant_women.csv", skip = 3)
-
-pregnant_women = pregnant_women %>%
+read_csv("data-raw/pregnant_women.csv", skip = 2) %>%
+  select(-Footnotes) %>%
   filter(Location != "United States") %>%
   rename(state = Location) %>%
-  left_join(fips::fips, by = "state") %>%
+  inner_join(fips::fips, by = "state") %>%
   select(state, fips, usps, everything()) %>%
-  tidyr::gather(year, cutoff, -state:-usps) %>%
-  tidyr::separate(year, c("month", "year")) %>%
-  mutate(cutoff = as.integer(cutoff))
+  gather(year, cutoff, -state:-usps) %>%
+  separate(year, c("month", "year")) %>%
+  mutate(cutoff = as.integer(cutoff * 100)) %>%
+  print() -> pregnant_women
 
-devtools::use_data(pregnant_women, overwrite = TRUE)
+usethis::use_data(pregnant_women, overwrite = TRUE)
