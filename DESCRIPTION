@@ -1,6 +1,6 @@
 Package: melig
 Title: Trends in Medicaid Income Eligibility Limits
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 'JJ Chen <jiajia.chern@gmail.com> [aut, cre]'
 Description: An R data package contains data for trends in Medicaid income eligibility limits. Source: The The Kaiser Family Foundation.
 Depends:
