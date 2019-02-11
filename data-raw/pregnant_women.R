@@ -11,7 +11,7 @@ read_csv("data-raw/pregnant_women.csv", skip = 2) %>%
   select(state, fips, usps, everything()) %>%
   gather(year, cutoff, -state:-usps) %>%
   separate(year, c("month", "year")) %>%
-  mutate(cutoff = as.integer(cutoff * 100)) %>%
+  mutate(cutoff = as.numeric(cutoff * 100)) %>%
   print() -> pregnant_women
 
 usethis::use_data(pregnant_women, overwrite = TRUE)

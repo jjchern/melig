@@ -11,7 +11,7 @@ read_csv("data-raw/childless_adults.csv", skip = 2) %>%
   select(state, fips, usps, everything()) %>%
   gather(year, cutoff, -state:-usps) %>%
   separate(year, c("month", "year")) %>%
-  mutate(cutoff = as.integer(cutoff * 100)) %>%
+  mutate(cutoff = as.numeric(cutoff * 100)) %>%
   print() -> childless_adults
 
 usethis::use_data(childless_adults, overwrite = TRUE)

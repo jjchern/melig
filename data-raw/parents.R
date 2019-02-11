@@ -11,7 +11,7 @@ read_csv("data-raw/parents.csv", skip = 2) %>%
   select(state, fips, usps, everything()) %>%
   gather(year, cutoff, -state:-usps) %>%
   separate(year, c("month", "year")) %>%
-  mutate(cutoff = as.integer(cutoff) * 100) %>%
+  mutate(cutoff = as.numeric(cutoff) * 100) %>%
   # WA 2002: Data not reported.
   # filter(is.na(cutoff))
   print() -> parents

@@ -12,7 +12,7 @@ read_csv("data-raw/infants_age_0_1_medicaid.csv", skip = 2) %>%
   gather(year, cutoff, -state:-usps) %>%
   separate(year, c("month", "year")) %>%
   mutate(type = "Medicaid", agegrp = "0-1") %>%
-  mutate(cutoff = as.integer(cutoff) * 100) %>% # filter(is.na(cutoff))
+  mutate(cutoff = as.numeric(cutoff) * 100) %>% # filter(is.na(cutoff))
   # TN 2000 and 2002 have not upper limits
   mutate(cutoff = if_else(usps == "TN" & year %in% c(2000, 2002), 9999, cutoff)) %>%
   select(state, fips, usps, type, agegrp, everything()) %>%
@@ -27,7 +27,7 @@ read_csv("data-raw/children_age_1_5_medicaid.csv", skip = 2) %>%
   gather(year, cutoff, -state:-usps) %>%
   separate(year, c("month", "year")) %>%
   mutate(type = "Medicaid", agegrp = "1-5") %>%
-  mutate(cutoff = as.integer(cutoff) * 100) %>% # filter(is.na(cutoff))
+  mutate(cutoff = as.numeric(cutoff) * 100) %>% # filter(is.na(cutoff))
   # TN 2000 and 2002 have not upper limits
   mutate(cutoff = if_else(usps == "TN" & year %in% c(2000, 2002), 9999, cutoff)) %>%
   select(state, fips, usps, type, agegrp, everything()) %>%
@@ -42,7 +42,7 @@ read_csv("data-raw/children_age_6_18_medicaid.csv", skip = 2) %>%
   tidyr::gather(year, cutoff, -state:-usps) %>%
   tidyr::separate(year, c("month", "year")) %>%
   mutate(type = "Medicaid", agegrp = "6-18") %>%
-  mutate(cutoff = as.integer(cutoff) * 100) %>% # filter(is.na(cutoff))
+  mutate(cutoff = as.numeric(cutoff) * 100) %>% # filter(is.na(cutoff))
   # TN 2000 and 2002 have not upper limits
   mutate(cutoff = if_else(usps == "TN" & year %in% c(2000, 2002), 9999, cutoff)) %>%
   select(state, fips, usps, type, agegrp, everything()) %>%
@@ -57,7 +57,7 @@ read_csv("data-raw/children_age_0_18_chip.csv", skip = 2) %>%
   gather(year, cutoff, -state:-usps) %>%
   separate(year, c("month", "year")) %>%
   mutate(type = "CHIP", agegrp = "0-18") %>%
-  mutate(cutoff = as.integer(cutoff) * 100) %>% # filter(is.na(cutoff)), No CHIP program
+  mutate(cutoff = as.numeric(cutoff) * 100) %>% # filter(is.na(cutoff)), No CHIP program
   select(state, fips, usps, type, agegrp, everything()) %>%
   print() -> chip0_18
 
@@ -70,7 +70,7 @@ read_csv("data-raw/children_chip_mcaid.csv", skip = 2) %>%
   gather(year, cutoff, -state:-usps) %>%
   separate(year, c("month", "year")) %>%
   mutate(type = "CHIP/Mcaid Upper", agegrp = "0-18") %>%
-  mutate(cutoff = as.integer(cutoff) * 100) %>% # filter(is.na(cutoff))
+  mutate(cutoff = as.numeric(cutoff) * 100) %>% # filter(is.na(cutoff))
   # TN 2000 and 2002 have not upper limits
   mutate(cutoff = if_else(usps == "TN" & year %in% c(2000, 2002), 9999, cutoff)) %>%
   select(state, fips, usps, type, agegrp, everything()) %>%
