@@ -7,8 +7,6 @@
 Status](https://travis-ci.org/jjchern/melig.svg?branch=master)](https://travis-ci.org/jjchern/melig)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/jjchern/melig?branch=master&svg=true)](https://ci.appveyor.com/project/jjchern/melig)
-[![GitHub
-release](https://img.shields.io/github/release/qubyte/rubidium.svg)]()
 
 The R package `melig` contains information on **M**edicaid income
 **elig**ibility limits, collected by [the Kaiser Family
@@ -52,9 +50,11 @@ folder contains raw data and R scripts.
 
 # Installing the Package
 
+You can install the released version of melig from Github with:
+
 ``` r
 # install.packages("remotes")
-remotes::install_github("jjchern/melig")
+remotes::install_github("jjchern/melig@v0.1.0")
 # To uninstall the package, use:
 # remove.packages("melig")
 ```
