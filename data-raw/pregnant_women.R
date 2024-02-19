@@ -1,13 +1,12 @@
 
-# Medicaid and CHIP income cutoff for prenant women ------------------------
+# Medicaid and CHIP income cutoff for pregnant women ------------------------
 
 library(tidyverse)
 
-read_csv("data-raw/pregnant_women.csv", skip = 2) %>%
+read_csv("data-raw/pregnant_women.csv", skip = 2, n_max = 52) %>%
   select(-Footnotes) %>%
-  filter(Location != "United States") %>%
   rename(state = Location) %>%
-  inner_join(fips::fips, by = "state") %>%
+  left_join(fips::fips, by = "state") %>%
   select(state, fips, usps, everything()) %>%
   gather(year, cutoff, -state:-usps) %>%
   separate(year, c("month", "year")) %>%
