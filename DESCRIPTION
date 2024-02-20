@@ -3,8 +3,9 @@ Title: Trends in Medicaid Income Eligibility Limits
 Version: 0.1.0
 Authors@R: person("JJ", "Chen", email = "jiajia.chern@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-8482-8398"))
-Description: An R data package contains data for trends in Medicaid income eligibility limits. 
-    Source: The The Kaiser Family Foundation.
+Description: This R data package contains data on the trends in Medicaid income 
+              eligibility limits for children, childless adults, parents, and 
+              pregnant women. The dataset is sourced from the Kaiser Family Foundation.
 Depends:
     R (>= 3.2.2)
 License: CC0
@@ -12,7 +13,7 @@ LazyData: true
 URL: https://github.com/jjchern/melig
 BugReports: https://github.com/jjchern/melig/issues
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.0
+RoxygenNote: 7.1.2
 Suggests: 
     spelling
 Language: en-US

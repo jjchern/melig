@@ -6,8 +6,7 @@
 \alias{melig-package}
 \title{melig: Trends in Medicaid Income Eligibility Limits}
 \description{
-An R data package contains data for trends in Medicaid income eligibility limits. 
-    Source: The The Kaiser Family Foundation.
+This R data package contains data on the trends in Medicaid income eligibility limits for children, childless adults, parents, and pregnant women. The dataset is sourced from the Kaiser Family Foundation.
 }
 \seealso{
 Useful links:
@@ -18,7 +17,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: JJ Chen \email{jiajia.chern@gmail.com} (0000-0001-8482-8398)
+\strong{Maintainer}: JJ Chen \email{jiajia.chern@gmail.com} (\href{https://orcid.org/0000-0001-8482-8398}{ORCID})
 
 }
 \keyword{internal}
