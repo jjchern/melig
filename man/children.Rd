@@ -3,15 +3,17 @@
 \docType{data}
 \name{children}
 \alias{children}
-\title{Medicaid/CHIP Income Eligibility Limits for Children, 2000-2018}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 4335 rows and 8 columns.}
+\title{Medicaid/CHIP Income Eligibility Limits for Children, 2000–2018}
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 4335 rows and 8 columns.
+}
 \source{
-\href{https://www.kff.org/medicaid/state-indicator/medicaidchip-upper-income-eligibility-limits-for-children/}{Medicaid/CHIP Upper Income Eligibility Limits for Children, 2000-2018}
+\href{https://www.kff.org/medicaid/state-indicator/medicaidchip-upper-income-eligibility-limits-for-children/}{Medicaid/CHIP Upper Income Eligibility Limits for Children, 2000–2018}
 }
 \usage{
 children
 }
 \description{
-Medicaid/CHIP Income Eligibility Limits for Children, 2000-2018
+Medicaid/CHIP Income Eligibility Limits for Children, 2000–2018
 }
 \keyword{datasets}

@@ -3,15 +3,17 @@
 \docType{data}
 \name{pregnant_women}
 \alias{pregnant_women}
-\title{Medicaid/CHIP Income Eligibility Limits for Pregnant Women, 2003-2018}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 765 rows and 6 columns.}
+\title{Medicaid/CHIP Income Eligibility Limits for Pregnant Women, 2003–2023}
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1040 rows and 6 columns.
+}
 \source{
-\href{https://www.kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women/}{Medicaid and CHIP Income Eligibility Limits for Pregnant Women, 2003-2018}
+\href{https://www.kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women/}{Medicaid and CHIP Income Eligibility Limits for Pregnant Women, 2003–2023}
 }
 \usage{
 pregnant_women
 }
 \description{
-Medicaid/CHIP Income Eligibility Limits for Pregnant Women, 2003-2018
+Medicaid/CHIP Income Eligibility Limits for Pregnant Women, 2003–2023
 }
 \keyword{datasets}

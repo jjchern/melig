@@ -1,19 +1,19 @@
-#' Medicaid Income Eligibility Limits for Parents, 2002-2018
+#' Medicaid Income Eligibility Limits for Parents, 2002–2023
 #'
-#' @source [Medicaid Income Eligibility Limits for Parents, 2002-2018](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents/)
+#' @source [Medicaid Income Eligibility Limits for Parents, 2002–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents/)
 "parents"
 
-#' Medicaid Income Eligibility Limits for Childless Adults, 2011-2023
+#' Medicaid Income Eligibility Limits for Childless Adults, 2011–2023
 #'
-#' @source [Medicaid Income Eligibility Limits for Other Non-Disabled Adults, 2011-2018](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/)
+#' @source [Medicaid Income Eligibility Limits for Other Non-Disabled Adults, 2011–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/)
 "childless_adults"
 
-#' Medicaid/CHIP Income Eligibility Limits for Pregnant Women, 2003-2023
+#' Medicaid/CHIP Income Eligibility Limits for Pregnant Women, 2003–2023
 #'
-#' @source [Medicaid and CHIP Income Eligibility Limits for Pregnant Women, 2003-2023](https://www.kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women/)
+#' @source [Medicaid and CHIP Income Eligibility Limits for Pregnant Women, 2003–2023](https://www.kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women/)
 "pregnant_women"
 
-#' Medicaid/CHIP Income Eligibility Limits for Children, 2000-2018
+#' Medicaid/CHIP Income Eligibility Limits for Children, 2000–2018
 #'
-#' @source [Medicaid/CHIP Upper Income Eligibility Limits for Children, 2000-2018](https://www.kff.org/medicaid/state-indicator/medicaidchip-upper-income-eligibility-limits-for-children/)
+#' @source [Medicaid/CHIP Upper Income Eligibility Limits for Children, 2000–2018](https://www.kff.org/medicaid/state-indicator/medicaidchip-upper-income-eligibility-limits-for-children/)
 "children"

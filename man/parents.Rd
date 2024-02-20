@@ -3,15 +3,17 @@
 \docType{data}
 \name{parents}
 \alias{parents}
-\title{Medicaid Income Eligibility Limits for Parents, 2002-2018}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 816 rows and 6 columns.}
+\title{Medicaid Income Eligibility Limits for Parents, 2002–2023}
+\format{
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1092 rows and 6 columns.
+}
 \source{
-\href{https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents/}{Medicaid Income Eligibility Limits for Parents, 2002-2018}
+\href{https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents/}{Medicaid Income Eligibility Limits for Parents, 2002–2023}
 }
 \usage{
 parents
 }
 \description{
-Medicaid Income Eligibility Limits for Parents, 2002-2018
+Medicaid Income Eligibility Limits for Parents, 2002–2023
 }
 \keyword{datasets}
