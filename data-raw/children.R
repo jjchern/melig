@@ -76,6 +76,7 @@ infant0_1 |>
   bind_rows(children6_18) |>
   bind_rows(chip0_18) |>
   bind_rows(chip_mcaid_upper) |>
+  mutate(year = as.integer(year)) |>
   print() -> children
 
 usethis::use_data(children, overwrite = TRUE)

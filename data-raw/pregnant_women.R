@@ -10,6 +10,7 @@ read_csv("data-raw/pregnant_women.csv", skip = 2, n_max = 52) |>
   select(state, fips, usps, everything()) |>
   gather(year, cutoff, -state:-usps) |>
   separate(year, c("month", "year")) |>
+  mutate(year = as.integer(year)) |>
   mutate(cutoff = as.numeric(cutoff * 100)) |>
   print() -> pregnant_women
 
