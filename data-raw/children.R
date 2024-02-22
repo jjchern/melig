@@ -3,11 +3,10 @@
 
 library(tidyverse)
 
-read_csv("data-raw/infants_age_0_1_medicaid.csv", skip = 2) %>%
+read_csv("data-raw/infants_age_0_1_medicaid.csv", skip = 2, n_max = 52) %>%
   select(-Footnotes) %>%
-  filter(Location != "United States") %>%
   rename(state = Location) %>%
-  inner_join(fips::fips, by = "state") %>%
+  left_join(fips::fips, by = "state") %>%
   select(state, fips, usps, everything()) %>%
   gather(year, cutoff, -state:-usps) %>%
   separate(year, c("month", "year")) %>%
@@ -18,11 +17,10 @@ read_csv("data-raw/infants_age_0_1_medicaid.csv", skip = 2) %>%
   select(state, fips, usps, type, agegrp, everything()) %>%
   print() -> infant0_1
 
-read_csv("data-raw/children_age_1_5_medicaid.csv", skip = 2) %>%
+read_csv("data-raw/children_age_1_5_medicaid.csv", skip = 2, n_max = 52) %>%
   select(-Footnotes) %>%
-  filter(Location != "United States") %>%
   rename(state = Location) %>%
-  inner_join(fips::fips, by = "state") %>%
+  left_join(fips::fips, by = "state") %>%
   select(state, fips, usps, everything()) %>%
   gather(year, cutoff, -state:-usps) %>%
   separate(year, c("month", "year")) %>%
@@ -33,11 +31,10 @@ read_csv("data-raw/children_age_1_5_medicaid.csv", skip = 2) %>%
   select(state, fips, usps, type, agegrp, everything()) %>%
   print() -> children1_5
 
-read_csv("data-raw/children_age_6_18_medicaid.csv", skip = 2) %>%
+read_csv("data-raw/children_age_6_18_medicaid.csv", skip = 2, n_max = 52) %>%
   select(-Footnotes) %>%
-  filter(Location != "United States") %>%
   rename(state = Location) %>%
-  inner_join(fips::fips, by = "state") %>%
+  left_join(fips::fips, by = "state") %>%
   select(state, fips, usps, everything()) %>%
   tidyr::gather(year, cutoff, -state:-usps) %>%
   tidyr::separate(year, c("month", "year")) %>%
@@ -48,11 +45,10 @@ read_csv("data-raw/children_age_6_18_medicaid.csv", skip = 2) %>%
   select(state, fips, usps, type, agegrp, everything()) %>%
   print() -> children6_18
 
-read_csv("data-raw/children_age_0_18_chip.csv", skip = 2) %>%
+read_csv("data-raw/children_age_0_18_chip.csv", skip = 2, n_max = 52) %>%
   select(-Footnotes) %>%
-  filter(Location != "United States") %>%
   rename(state = Location) %>%
-  inner_join(fips::fips, by = "state") %>%
+  left_join(fips::fips, by = "state") %>%
   select(state, fips, usps, everything()) %>%
   gather(year, cutoff, -state:-usps) %>%
   separate(year, c("month", "year")) %>%
@@ -61,11 +57,10 @@ read_csv("data-raw/children_age_0_18_chip.csv", skip = 2) %>%
   select(state, fips, usps, type, agegrp, everything()) %>%
   print() -> chip0_18
 
-read_csv("data-raw/children_chip_mcaid.csv", skip = 2) %>%
+read_csv("data-raw/children_schip_mcaid.csv", skip = 2, n_max = 52) %>%
   select(-Footnotes) %>%
-  filter(Location != "United States") %>%
   rename(state = Location) %>%
-  inner_join(fips::fips, by = "state") %>%
+  left_join(fips::fips, by = "state") %>%
   select(state, fips, usps, everything()) %>%
   gather(year, cutoff, -state:-usps) %>%
   separate(year, c("month", "year")) %>%
@@ -81,7 +76,6 @@ infant0_1 %>%
   bind_rows(children6_18) %>%
   bind_rows(chip0_18) %>%
   bind_rows(chip_mcaid_upper) %>%
-  arrange(fips, year) %>%
   print() -> children
 
 usethis::use_data(children, overwrite = TRUE)
