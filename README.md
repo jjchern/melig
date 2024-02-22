@@ -4329,7 +4329,7 @@ melig::children %>%
 
 ## Income Cutoffs for Pregnant Women and Parents, 2002—2023
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-Medicaid_Eligibility_Cutoffs_2002-2023-1.png" width="100%" />
 
 ## Save as Other Data Formats
 

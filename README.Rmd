@@ -196,7 +196,7 @@ melig::children %>%
 
 ## Income Cutoffs for Pregnant Women and Parents, 2002—2023
 
-```{r, message=FALSE, warning=FALSE, echo=FALSE}
+```{r Medicaid_Eligibility_Cutoffs_2002-2023, message=FALSE, warning=FALSE, echo=FALSE}
 bind_rows(
   melig::parents |> 
   mutate(year = lubridate::ym(paste0(year, month))) |> 
