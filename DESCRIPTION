@@ -13,7 +13,8 @@ LazyData: true
 URL: https://github.com/jjchern/melig
 BugReports: https://github.com/jjchern/melig/issues
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.3.1
+Encoding: UTF-8
 Suggests: 
     spelling
 Language: en-US
