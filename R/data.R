@@ -13,7 +13,7 @@
 #' @source [Medicaid and CHIP Income Eligibility Limits for Pregnant Women, 2003–2023](https://www.kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women/)
 "pregnant_women"
 
-#' Medicaid/CHIP Income Eligibility Limits for Children, 2000–2018
+#' Medicaid/CHIP Income Eligibility Limits for Children, 2000–2023
 #'
-#' @source [Medicaid/CHIP Upper Income Eligibility Limits for Children, 2000–2018](https://www.kff.org/medicaid/state-indicator/medicaidchip-upper-income-eligibility-limits-for-children/)
+#' @source [Medicaid/CHIP Upper Income Eligibility Limits for Children, 2000–2023](https://www.kff.org/medicaid/state-indicator/medicaidchip-upper-income-eligibility-limits-for-children/)
 "children"

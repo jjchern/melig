@@ -49,7 +49,7 @@ It includes the following datasets:
   2002–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents/)
 - `childless_adults.rda`: [Medicaid Income Eligibility Limits for Other
   Non-Disabled Adults,
-  2011–2018](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/)
+  2011–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/)
 
 The datasets are stored in tidy format (long table).
 
