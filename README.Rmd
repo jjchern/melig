@@ -28,6 +28,25 @@ export_formattable <- function(f, file, width = "100%", height = NULL,
 }
 ```
 
+# About `melig`
+
+The R package `melig` contains information on **M**edicaid income **elig**ibility limits, collected by [the Kaiser Family Foundation](http://kff.org/data-collection/trends-in-medicaid-income-eligibility-limits/). It includes the following datasets:
+
+- `children.rda`: 
+    - [Medicaid Income Eligibility Limits for Infants Ages 0–1, 2000–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-infants-ages-0-1/)
+    - [Medicaid Income Eligibility Limits for Children Ages 1–5, 2000–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-children-ages-1-5/)
+    - [Medicaid Income Eligibility Limits for Children Ages 6–18, 2000–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-children-ages-6-18/)
+    - [Separate Children’s Health Insurance Program (CHIP) Income Eligibility Limits for Children, 2000–2023](https://www.kff.org/medicaid/state-indicator/separate-childrens-health-insurance-program-chip-income-eligibility-limits-for-children/)
+    - [Medicaid/CHIP Upper Income Eligibility Limits for Children, 2000–2023](https://www.kff.org/medicaid/state-indicator/medicaidchip-upper-income-eligibility-limits-for-children/)
+    
+- `prenant_wom.rda`: [Medicaid and CHIP Income Eligibility Limits for Pregnant Women, 2003–2023](https://www.kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women/)
+- `parents.rda`: [Medicaid Income Eligibility Limits for Parents, 2002–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents/)
+- `childless_adults.rda`:  [Medicaid Income Eligibility Limits for Other Non-Disabled Adults, 2011–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/)
+
+The datasets are stored in long format.
+
+The [`/data-raw/`](https://github.com/jjchern/melig/tree/master/data-raw) folder contains raw data and R scripts.
+
 # Installing the Package
 
 You can install `melig` from Github with:
@@ -44,28 +63,6 @@ remotes::install_github("jjchern/melig@v0.1.0")
 # To uninstall the package, use:
 # remove.packages("melig")
 ```
-
-# About `melig`
-
-[![Travis-CI Build Status](https://travis-ci.org/jjchern/melig.svg?branch=master)](https://travis-ci.org/jjchern/melig)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/jjchern/melig?branch=master&svg=true)](https://ci.appveyor.com/project/jjchern/melig)
-
-The R package `melig` contains information on **M**edicaid income **elig**ibility limits, collected by [the Kaiser Family Foundation](http://kff.org/data-collection/trends-in-medicaid-income-eligibility-limits/). It includes the following datasets:
-
-- `children.rda`: 
-    - [Medicaid Income Eligibility Limits for Infants Ages 0–1, 2000–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-infants-ages-0-1/)
-    - [Medicaid Income Eligibility Limits for Children Ages 1–5, 2000–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-children-ages-1-5/)
-    - [Medicaid Income Eligibility Limits for Children Ages 6–18, 2000–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-children-ages-6-18/)
-    - [Separate Children’s Health Insurance Program (CHIP) Income Eligibility Limits for Children, 2000–2023](https://www.kff.org/medicaid/state-indicator/separate-childrens-health-insurance-program-chip-income-eligibility-limits-for-children/)
-    - [Medicaid/CHIP Upper Income Eligibility Limits for Children, 2000–2023](https://www.kff.org/medicaid/state-indicator/medicaidchip-upper-income-eligibility-limits-for-children/)
-    
-- `prenant_wom.rda`: [Medicaid and CHIP Income Eligibility Limits for Pregnant Women, 2003–2023](https://www.kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-pregnant-women/)
-- `parents.rda`: [Medicaid Income Eligibility Limits for Parents, 2002–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-parents/)
-- `childless_adults.rda`:  [Medicaid Income Eligibility Limits for Other Non-Disabled Adults, 2011–2023](https://www.kff.org/medicaid/state-indicator/medicaid-income-eligibility-limits-for-other-non-disabled-adults/)
-
-The datasets are stored in tidy format (long table).
-
-The [`/data-raw/`](https://github.com/jjchern/melig/tree/master/data-raw) folder contains raw data and R scripts.
 
 # Useful Links
 
@@ -107,108 +104,10 @@ rio::export(melig::parents, "pa0218.dta")
 
 Or download the `*.rda` file and try the [rioweb](https://lbraglia.shinyapps.io/rioweb) made by @[lbraglia](https://github.com/lbraglia).
 
-## States that Have Income Cutoffs Greater Than 100 Federal Poverty Guidelines in 2014
+## Explore the Vignette
 
-```{r, message=FALSE, warning=FALSE}
-# for parents
-melig::parents %>% 
-  filter(year == 2014) %>% 
-  filter(cutoff >= 100) %>% 
-  select(state, fips, usps, pa_cutoff = cutoff) %>% 
-  formattable(list(pa_cutoff = normalize_bar("lightgreen", 0.2)))
+For a more detailed exploration of the Medicaid income eligibility cutoffs data, check out the [vignette](https://jjchern.github.io/melig/articles/medicaid-income-eligibility-cutoffs-overview.html). To access the vignette within R, after installing the package, you can view the vignette using the following command in your R console:
 
-# for childless adults
-melig::childless_adults %>% 
-  filter(year == 2014) %>% 
-  filter(cutoff >= 100) %>% 
-  select(state, fips, usps, ca_cutoff = cutoff) %>% 
-  formattable(list(ca_cutoff = normalize_bar("lightgreen", 0.2))) 
+```r
+vignette("medicaid-income-eligibility-cutoffs-overview")
 ```
-
-## Income Cutoffs for Parents in 2010–2018
-
-```{r pa_cutoffs}
-melig::parents %>% 
-  mutate(
-    year = if_else(year == "2009" & month == "December", "2010", year),
-    year = year %>% as.integer()
-  ) %>% 
-  filter(year %in% 2010:2018) %>% 
-  select(-month, -state, -fips) %>% 
-  tidyr::spread(year, cutoff) %>% 
-  rename(
-    pa_2010 = `2010`,
-    pa_2011 = `2011`,
-    pa_2012 = `2012`,
-    pa_2013 = `2013`,
-    pa_2014 = `2014`,
-    pa_2015 = `2015`,
-    pa_2016 = `2016`,
-    pa_2017 = `2017`,
-    pa_2018 = `2018`
-  ) %>% 
-  formattable(
-    list(
-     pa_2010 = color_tile("white", "orange"),
-     pa_2011 = color_tile("white", "orange"),
-     pa_2012 = color_tile("white", "orange"),
-     pa_2013 = color_tile("white", "orange"),
-     pa_2014 = color_tile("white", "orange"),
-     pa_2015 = color_tile("white", "orange"),
-     pa_2016 = color_tile("white", "orange"),
-     pa_2017 = color_tile("white", "orange"),
-     pa_2018 = color_tile("white", "orange")
-    )
-  ) 
-```
-
-## Income Cutoffs for Childless Adults in 2011–2018
-
-```{r ca_cutoffs}
-melig::childless_adults %>% 
-  mutate(year = as.integer(year)) %>% 
-  filter(year %in% 2011:2018) %>% 
-  select(-month, -state, -fips) %>% 
-  tidyr::spread(year, cutoff) %>% 
-  rename(
-    ca_2011 = `2011`,
-    ca_2012 = `2012`,
-    ca_2013 = `2013`,
-    ca_2014 = `2014`,
-    ca_2015 = `2015`,
-    ca_2016 = `2016`,
-    ca_2017 = `2017`,
-    ca_2018 = `2018`
-  ) %>% 
-  formattable(
-    list(
-      ca_2011 = color_tile("white", "orange"),
-      ca_2012 = color_tile("white", "orange"),
-      ca_2013 = color_tile("white", "orange"),
-      ca_2014 = color_tile("white", "orange"),
-      ca_2015 = color_tile("white", "orange"),
-      ca_2016 = color_tile("white", "orange"),
-      ca_2017 = color_tile("white", "orange"),
-      ca_2018 = color_tile("white", "orange")
-    )
-  ) 
-```
-
-## Income Cutoffs for Children
-
-_Note_: The children dataset, `melig::children`, has 
-
-- a `type` variable that separates Medicaid and CHIP programs, and 
-- an `agegrp` variable that indicates specific age groups.
-
-Because the age information for the CHIP programs (`type == CHIP`) is not available from the source data, I assign a value of "0-18" to the corresponding `age` variable, though some states' CHIP programs don't cover all children under age 19 in some years.
-
-```{r, message=FALSE, warning=FALSE}
-# the data
-melig::children
-
-# IL
-melig::children %>% 
-  filter(usps == "IL") 
-```
-

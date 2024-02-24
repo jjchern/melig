@@ -3,25 +3,31 @@ title: "Overview of Medicaid Income Eligibility Cutoffs Across States and Eligib
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Overview of Medicaid Income Eligibility Cutoffs Across States and Eligibility Groups}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  message=FALSE,
+  warning=FALSE, 
+  echo=FALSE
 )
 ```
 
-```{r setup}
+```{r setup, message=FALSE, echo=TRUE}
 library(tidyverse)
+library(formattable)
 library(melig)
 ```
 
 ## Income Cutoffs for Pregnant Women and Parents, 2002—2023
 
-```{r Medicaid_Eligibility_Cutoffs_2002-2023, message=FALSE, warning=FALSE, echo=FALSE}
+```{r Medicaid_Eligibility_Cutoffs_2002-2023}
 bind_rows(
   melig::parents |> 
   mutate(year = lubridate::ym(paste0(year, month))) |> 
@@ -46,3 +52,107 @@ bind_rows(
        title = "Median State-Level Medicaid Income Eligibility Cutoffs, 2002–2023")
 ```
 
+## States that Have Income Eligibility Cutoffs Greater Than 100 Federal Poverty Guidelines in 2014
+
+```{r}
+# For parents
+melig::parents %>% 
+  filter(year == 2014) %>% 
+  filter(cutoff >= 100) %>% 
+  select(state, fips, usps, pa_cutoff = cutoff) %>% 
+  formattable(list(pa_cutoff = normalize_bar("lightgreen", 0.2)))
+
+# For childless adults
+melig::childless_adults %>% 
+  filter(year == 2014) %>% 
+  filter(cutoff >= 100) %>% 
+  select(state, fips, usps, ca_cutoff = cutoff) %>% 
+  formattable(list(ca_cutoff = normalize_bar("lightgreen", 0.2))) 
+```
+
+## Income Eligibility Cutoffs for Parents in 2010–2018
+
+```{r pa_cutoffs}
+melig::parents %>% 
+  mutate(
+    year = if_else(year == 2009L & month == "December", 2010L, year),
+    year = year %>% as.integer()
+  ) %>% 
+  filter(year %in% 2010:2018) %>% 
+  select(-month, -state, -fips) %>% 
+  tidyr::spread(year, cutoff) %>% 
+  rename(
+    pa_2010 = `2010`,
+    pa_2011 = `2011`,
+    pa_2012 = `2012`,
+    pa_2013 = `2013`,
+    pa_2014 = `2014`,
+    pa_2015 = `2015`,
+    pa_2016 = `2016`,
+    pa_2017 = `2017`,
+    pa_2018 = `2018`
+  ) %>% 
+  formattable(
+    list(
+     pa_2010 = color_tile("white", "orange"),
+     pa_2011 = color_tile("white", "orange"),
+     pa_2012 = color_tile("white", "orange"),
+     pa_2013 = color_tile("white", "orange"),
+     pa_2014 = color_tile("white", "orange"),
+     pa_2015 = color_tile("white", "orange"),
+     pa_2016 = color_tile("white", "orange"),
+     pa_2017 = color_tile("white", "orange"),
+     pa_2018 = color_tile("white", "orange")
+    )
+  ) 
+```
+
+## Income Eligibility Cutoffs for Childless Adults in 2011–2018
+
+```{r ca_cutoffs}
+melig::childless_adults %>% 
+  mutate(year = as.integer(year)) %>% 
+  filter(year %in% 2011:2018) %>% 
+  select(-month, -state, -fips) %>% 
+  tidyr::spread(year, cutoff) %>% 
+  rename(
+    ca_2011 = `2011`,
+    ca_2012 = `2012`,
+    ca_2013 = `2013`,
+    ca_2014 = `2014`,
+    ca_2015 = `2015`,
+    ca_2016 = `2016`,
+    ca_2017 = `2017`,
+    ca_2018 = `2018`
+  ) %>% 
+  formattable(
+    list(
+      ca_2011 = color_tile("white", "orange"),
+      ca_2012 = color_tile("white", "orange"),
+      ca_2013 = color_tile("white", "orange"),
+      ca_2014 = color_tile("white", "orange"),
+      ca_2015 = color_tile("white", "orange"),
+      ca_2016 = color_tile("white", "orange"),
+      ca_2017 = color_tile("white", "orange"),
+      ca_2018 = color_tile("white", "orange")
+    )
+  ) 
+```
+
+## Income Eligibility Cutoffs for Children
+
+_Note_: The `melig::children` dataset includes two key variables:
+
+- `type`: Distinguishes between Medicaid and CHIP (Children's Health Insurance Program) programs.
+- `agegrp`: Indicates specific age groups within these programs.
+
+The age data for CHIP programs (`type` == CHIP) is not explicitly provided in the source data. Therefore, in this dataset, a general age range of "0-18" is assigned to the age variable for CHIP. However, certain states' CHIP programs may not cover all children under age 19 in some years.
+
+```{r, message=FALSE, warning=FALSE}
+
+melig::children
+
+# IL
+melig::children %>% 
+  filter(usps == "IL") 
+```
