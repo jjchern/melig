@@ -1,6 +1,6 @@
 Package: melig
 Title: Trends in Medicaid Income Eligibility Limits
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R: person("JJ", "Chen", email = "jiajia.chern@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-8482-8398"))
 Description: This R data package contains data on the trends in Medicaid income 
@@ -16,5 +16,8 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
 Encoding: UTF-8
 Suggests: 
+    knitr,
+    rmarkdown,
     spelling
 Language: en-US
+VignetteBuilder: knitr
