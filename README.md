@@ -73,7 +73,20 @@ folder contains raw data and R scripts.
 library(tidyverse)
 library(formattable)
 
-# the datasets have been tidied
+# List all available datasets
+data(package = "melig") %>% 
+    pluck("results") %>% 
+    as_tibble() %>% 
+    select(Package, Item)
+#> # A tibble: 4 × 2
+#>   Package Item            
+#>   <chr>   <chr>           
+#> 1 melig   childless_adults
+#> 2 melig   children        
+#> 3 melig   parents         
+#> 4 melig   pregnant_women
+
+# The datasets are in long format
 melig::parents
 #> # A tibble: 1,092 × 6
 #>    state                fips  usps  month   year  cutoff
@@ -90,7 +103,7 @@ melig::parents
 #> 10 District of Columbia 11    DC    January 2002     200
 #> # ℹ 1,082 more rows
 
-# but you can covert it back to the original wide format
+# But you can always convert them back to the original wide format
 melig::parents %>% 
   unite_("monyear", c("month", "year"), sep = " ") %>% 
   spread(monyear, cutoff)
@@ -115,6 +128,20 @@ melig::parents %>%
 #> #   `January 2021` <dbl>, `January 2022` <dbl>, `January 2023` <dbl>,
 #> #   `July 2004` <dbl>, `July 2005` <dbl>, `July 2006` <dbl>
 ```
+
+## Save as Other Data Formats
+
+``` r
+# save as Stata format
+haven::write_dta(melig::parents, "pa0218.dta")
+
+# or
+rio::export(melig::parents, "pa0218.dta")
+```
+
+Or download the `*.rda` file and try the
+[rioweb](https://lbraglia.shinyapps.io/rioweb) made by
+@[lbraglia](https://github.com/lbraglia).
 
 ## States that Have Income Cutoffs Greater Than 100 Federal Poverty Guidelines in 2014
 
@@ -4326,21 +4353,3 @@ melig::children %>%
 #> 10 Illinois 17    IL    CHIP/Mcaid Upper 0-18   January 2002     200
 #> # ℹ 75 more rows
 ```
-
-## Income Cutoffs for Pregnant Women and Parents, 2002—2023
-
-<img src="man/figures/README-Medicaid_Eligibility_Cutoffs_2002-2023-1.png" width="100%" />
-
-## Save as Other Data Formats
-
-``` r
-# save as Stata format
-haven::write_dta(melig::parents, "pa0218.dta")
-
-# or
-rio::export(melig::parents, "pa0218.dta")
-```
-
-Or download the `*.rda` file and try the
-[rioweb](https://lbraglia.shinyapps.io/rioweb) made by
-@[lbraglia](https://github.com/lbraglia).

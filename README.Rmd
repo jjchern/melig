@@ -80,14 +80,32 @@ The [`/data-raw/`](https://github.com/jjchern/melig/tree/master/data-raw) folder
 library(tidyverse)
 library(formattable)
 
-# the datasets have been tidied
+# List all available datasets
+data(package = "melig") %>% 
+    pluck("results") %>% 
+    as_tibble() %>% 
+    select(Package, Item)
+
+# The datasets are in long format
 melig::parents
 
-# but you can covert it back to the original wide format
+# But you can always convert them back to the original wide format
 melig::parents %>% 
   unite_("monyear", c("month", "year"), sep = " ") %>% 
   spread(monyear, cutoff)
 ```
+
+## Save as Other Data Formats
+
+```r
+# save as Stata format
+haven::write_dta(melig::parents, "pa0218.dta")
+
+# or
+rio::export(melig::parents, "pa0218.dta")
+```
+
+Or download the `*.rda` file and try the [rioweb](https://lbraglia.shinyapps.io/rioweb) made by @[lbraglia](https://github.com/lbraglia).
 
 ## States that Have Income Cutoffs Greater Than 100 Federal Poverty Guidelines in 2014
 
@@ -193,43 +211,4 @@ melig::children
 melig::children %>% 
   filter(usps == "IL") 
 ```
-
-## Income Cutoffs for Pregnant Women and Parents, 2002—2023
-
-```{r Medicaid_Eligibility_Cutoffs_2002-2023, message=FALSE, warning=FALSE, echo=FALSE}
-bind_rows(
-  melig::parents |> 
-  mutate(year = lubridate::ym(paste0(year, month))) |> 
-  filter(state == "United States") |> 
-  mutate(elig_grp = "Parents"),
-  
-  melig::pregnant_women |> 
-  mutate(year = lubridate::ym(paste0(year, month))) |> 
-  filter(state == "United States") |> 
-  mutate(elig_grp = "Pregnant Beneficiaries")
-) |> 
-  mutate(cutoff = cutoff / 100) |> 
-  ggplot(aes(x = year, y = cutoff, colour = elig_grp, fill = elig_grp)) +
-  geom_point() +
-  geom_path() +
-  hrbrthemes::theme_ipsum(grid = "XY", plot_title_size = 12) +
-  hrbrthemes::scale_y_percent(limits = c(0, 2.5)) +
-  theme(legend.position = "top",
-        legend.title = element_blank(),
-        aspect.ratio = 0.618) +
-  labs(x = NULL, y = "Federal Poverl Level",
-       title = "Median State-Level Medicaid Income Eligibility Cutoffs, 2002–2023")
-```
-
-## Save as Other Data Formats
-
-```r
-# save as Stata format
-haven::write_dta(melig::parents, "pa0218.dta")
-
-# or
-rio::export(melig::parents, "pa0218.dta")
-```
-
-Or download the `*.rda` file and try the [rioweb](https://lbraglia.shinyapps.io/rioweb) made by @[lbraglia](https://github.com/lbraglia).
 
